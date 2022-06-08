@@ -1,0 +1,113 @@
+.page_body{
+    // background-color: red;
+    height: 42rem;
+    background-image: url("../../img/Cap3.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form {
+    height: 30rem;
+    width: 23rem;
+    background: rgba(0, 46, 91, .87);
+    border-radius: 7px;
+    margin-bottom: 9rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: translate(135%, 18%);
+    // box-shadow: 0 0 2px blue;
+
+    img {
+        margin-top: 18px;
+        height: 90px;
+        width: 90px;
+    }
+
+    .login-label {
+        margin-top: -38px;
+        font-size: var(--fs-title);
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .items {
+        margin-top: -25px;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+
+        input::placeholder {
+            color: black;
+        }
+
+        input {
+            height: 28px;
+            width: 18rem;
+            border: 0;
+            background: white;
+            color: black;
+            padding-left: .5rem;
+            border-radius: 5px;
+        }
+        label{
+            color: white;
+            font-size: 18px;
+        }
+    }
+
+    .control_container{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 15px;
+        margin-top: -30px;
+    }
+    .checkbox {
+        accent-color: yellow;
+        label {
+                color: white;
+        }
+    }
+     .forgot {
+        // font-size: 12px;
+        // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+   
+
+    .btn {
+        background: white;
+        padding: 6px 18px;
+        border-radius: 9px;
+        color: #002e5b;
+        margin-top: -6px;
+        margin-bottom: 18px;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        &:hover{
+            color: white;
+            background: #002e5b;
+        }
+
+    }
+
+    .signup_link{
+        p{
+            color: white;
+        }
+        a{
+            color: yellow;
+            // text-decoration: none;
+        }
+    }
+   
+}

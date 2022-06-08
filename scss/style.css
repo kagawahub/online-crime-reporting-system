@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+
+.caption_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caption_container h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5.2rem;
+  background: rgba(255, 0, 0, 0.911);
+  width: 100%;
+  padding: 0.7rem;
+  -webkit-animation-name: colorchange;
+          animation-name: colorchange;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.header_img img {
+  width: 100%;
+  filter: saturate(150%);
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+    color: white;
+  }
+  25% {
+    color: Yellow;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: yellow;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes colorchange {
+  0% {
+    color: white;
+  }
+  25% {
+    color: Yellow;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: yellow;
+  }
+  100% {
+    color: white;
+  }
+}
+nav {
+  background: #002e5b;
+  color: white;
+  height: 22%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  margin-right: 4rem;
+  display: flex;
+  justify-content: space-around;
+  width: 43.6%;
+  font-size: 25px;
+}
+nav ul a {
+  color: white;
+  text-decoration: none;
+}
+nav li {
+  display: flex;
+  align-items: center;
+}
+nav li:hover {
+  color: red;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+nav .logo {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav .logo img {
+  width: 6.5rem;
+  height: 6.5rem;
+}
+nav .logo h1 {
+  font-weight: 700;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  background: #002e5b;
+  height: 20rem;
+  padding: 2rem 5rem;
+}
+
+.sitemap h2 {
+  color: rgba(255, 0, 0, 0.911);
+  margin-bottom: 0.7rem;
+}
+.sitemap ul {
+  font-size: 20px;
+}
+.sitemap li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.6rem;
+}
+.sitemap li:hover {
+  color: rgb(107, 181, 242);
+}
+.sitemap a {
+  color: white;
+  text-decoration: none;
+}
+
+.social h2 {
+  color: rgba(255, 0, 0, 0.911);
+  margin-bottom: 0.7rem;
+}
+.social i {
+  margin-bottom: 0.6rem;
+}
+.social i:hover {
+  color: rgb(107, 181, 242);
+}
+.social a {
+  color: White;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.page_body {
+  height: 42rem;
+  background-image: url("../../img/Cap3.PNG");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form {
+  height: 30rem;
+  width: 23rem;
+  background: rgba(0, 46, 91, 0.87);
+  border-radius: 7px;
+  margin-bottom: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transform: translate(135%, 18%);
+}
+form img {
+  margin-top: 18px;
+  height: 90px;
+  width: 90px;
+}
+form .login-label {
+  margin-top: -38px;
+  font-size: var(--fs-title);
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+form .items {
+  margin-top: -25px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+form .items input::-moz-placeholder {
+  color: black;
+}
+form .items input:-ms-input-placeholder {
+  color: black;
+}
+form .items input::placeholder {
+  color: black;
+}
+form .items input {
+  height: 28px;
+  width: 18rem;
+  border: 0;
+  background: white;
+  color: black;
+  padding-left: 0.5rem;
+  border-radius: 5px;
+}
+form .items label {
+  color: white;
+  font-size: 18px;
+}
+form .control_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 15px;
+  margin-top: -30px;
+}
+form .checkbox {
+  accent-color: yellow;
+}
+form .checkbox label {
+  color: white;
+}
+form .forgot a {
+  color: white;
+  text-decoration: none;
+}
+form .btn {
+  background: white;
+  padding: 6px 18px;
+  border-radius: 9px;
+  color: #002e5b;
+  margin-top: -6px;
+  margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+form .btn:hover {
+  color: white;
+  background: #002e5b;
+}
+form .signup_link p {
+  color: white;
+}
+form .signup_link a {
+  color: yellow;
+}/*# sourceMappingURL=style.css.map */
