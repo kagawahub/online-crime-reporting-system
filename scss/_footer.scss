@@ -5,12 +5,15 @@ footer{
     background: #002e5b;
     height: 20rem;
     padding: 2rem 5rem;
+    h2 {
+            color: rgba(255, 0, 0, 0.911);
+            ;
+            margin-bottom: 0.7rem;
+        }
+
 }
 .sitemap{
-    h2{
-        color: rgba(255, 0, 0, 0.911);;
-        margin-bottom: 0.7rem;
-    }
+   
     ul {
         font-size: 20px;
     }
@@ -21,7 +24,7 @@ footer{
         margin-bottom: 0.6rem;
     
          &:hover {
-            color: rgb(107, 181, 242);
+            color: rgba(255, 0, 0, 0.911);
         }
     }
     
@@ -31,22 +34,31 @@ footer{
     }
 }
 .social{
-    h2{
-        color: rgba(255, 0, 0, 0.911);;
-        margin-bottom: 0.7rem;
-    }
     i{
-            margin-bottom: 0.6rem;
-        &:hover{
-            color: rgb(107, 181, 242);
-        }
-
+        // border-right: 2px solid red;
+        // padding-right: 10%;
+        margin-bottom: 0.6rem;
+        font-size: 22px;
     }
+    
     a{
         color: White;
+        display: flex;
+        text-decoration: none;
     }
 }
-.links{
+.link_item{
     display: flex;
-    flex-direction: column;
+    margin-bottom: .7rem;
+    &:hover {
+        color: rgba(255, 0, 0, 0.911);
+    }
+    
+    p {
+        margin-left: .1rem;
+        font-size: 18px;
+    }
+}
+.footer_map{
+    
 }

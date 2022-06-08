@@ -84,7 +84,7 @@
                 <a href="../index.php">
                     <li>Home</li>
                 </a>
-                <a href="#login">
+                <a href="#">
                     <li>Login</li>
                 </a>
                 <a href="#register">
@@ -99,14 +99,32 @@
             </ul>
         </section>
         <section class="social">
-            <h2>Follow Us On</h2>
-            <div class="links">
-                <a href="https://www.facebook.com/kagawabossman"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/Spratagious"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://github.com/kagawahub"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/owusu-bossman-415330212/"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-            </div>
+            <h2>Follow Us On:</h2>
 
+            <a href="https://www.facebook.com/GhPoliceService/">
+                <div class="link_item"><i class="fa fa-facebook" aria-hidden="true"></i>
+                    <p> : facebook</p>
+                </div>
+            </a>
+            <a href="https://twitter.com/GhPoliceService/">
+                <div class="link_item"><i class="fa fa-twitter" aria-hidden="true"></i>
+                    <p>: twitter</p>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/ghpoliceservice/">
+                <div class="link_item"><i class="fa fa-instagram" aria-hidden="true"></i>
+                    <p> : instagram</p>
+                </div>
+            </a>
+            <a href="https://www.youtube.com/channel/UCy3jXFdDPuYmW2jy1bJAKfA">
+                <div class="link_item"><i class="fa fa-youtube" aria-hidden="true"></i>
+                    <p> : youtube</p>
+                </div>
+            </a>
+        </section>
+        <section class="footer_map">
+            <h2>Locate Us</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9735558734865!2d-0.1888890857310853!3d5.570927595960935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a7d588b5833%3A0xb1138c9b28557412!2sGhana%20Police%20Headquarters!5e0!3m2!1sen!2sgh!4v1654725275138!5m2!1sen!2sgh" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </footer>
 </body>

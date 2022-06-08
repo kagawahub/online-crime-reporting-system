@@ -126,11 +126,11 @@ footer {
   height: 20rem;
   padding: 2rem 5rem;
 }
-
-.sitemap h2 {
+footer h2 {
   color: rgba(255, 0, 0, 0.911);
   margin-bottom: 0.7rem;
 }
+
 .sitemap ul {
   font-size: 20px;
 }
@@ -140,30 +140,33 @@ footer {
   margin-bottom: 0.6rem;
 }
 .sitemap li:hover {
-  color: rgb(107, 181, 242);
+  color: rgba(255, 0, 0, 0.911);
 }
 .sitemap a {
   color: white;
   text-decoration: none;
 }
 
-.social h2 {
-  color: rgba(255, 0, 0, 0.911);
-  margin-bottom: 0.7rem;
-}
 .social i {
   margin-bottom: 0.6rem;
-}
-.social i:hover {
-  color: rgb(107, 181, 242);
+  font-size: 22px;
 }
 .social a {
   color: White;
+  display: flex;
+  text-decoration: none;
 }
 
-.links {
+.link_item {
   display: flex;
-  flex-direction: column;
+  margin-bottom: 0.7rem;
+}
+.link_item:hover {
+  color: rgba(255, 0, 0, 0.911);
+}
+.link_item p {
+  margin-left: 0.1rem;
+  font-size: 18px;
 }
 
 .page_body {
