@@ -25,11 +25,11 @@ form {
         width: 90px;
     }
 
-    .login-label {
+    .login_label {
         margin-top: -38px;
-        font-size: var(--fs-title);
-        color: white;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 24px;
+        color: yellow;
+        font-weight: 700;
     }
 
     .items {
@@ -107,7 +107,11 @@ form {
         a{
             color: yellow;
             // text-decoration: none;
+            &:hover {
+                    color: rgba(255, 0, 0, 0.911);
+                }
         }
+       
     }
    
 }

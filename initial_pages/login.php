@@ -27,13 +27,13 @@
                 <a href="#login">
                     <li>Login</li>
                 </a>
-                <a href="#register">
+                <a href="./register.php">
                     <li>Register</li>
                 </a>
-                <a href="#about">
+                <a href="./about.php">
                     <li>About</li>
                 </a>
-                <a href="#emergency">
+                <a href="./emergency.php">
                     <li>Emergency numbers</li>
                 </a>
             </ul>
@@ -47,7 +47,7 @@
                 <img src="../img/Crop crop/police_barge-used.png" alt="">
             </div>
 
-            <div class="login-label">LOG IN</div>
+            <div class="login_label">LOG IN</div>
 
             <div class="items">
                 <label for="username">Username</label>
@@ -73,7 +73,7 @@
             <button class="btn">Login</button>
 
             <div class="signup_link">
-                <p>New to the system? <a href="#">Sign up</a></p>
+                <p>New to the system? <a href="./register.php">Sign up</a></p>
             </div>
         </form>
     </div>
@@ -87,13 +87,13 @@
                 <a href="#">
                     <li>Login</li>
                 </a>
-                <a href="#register">
+                <a href="./register.php">
                     <li>Register</li>
                 </a>
-                <a href="#about">
+                <a href="./about.php">
                     <li>About</li>
                 </a>
-                <a href="#emergency">
+                <a href="./emergency.php">
                     <li>Emergency numbers</li>
                 </a>
             </ul>

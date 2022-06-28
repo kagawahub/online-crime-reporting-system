@@ -26,13 +26,13 @@
                 <a href="./initial_pages/login.php">
                     <li>Login</li>
                 </a>
-                <a href="#register">
+                <a href="./initial_pages/register.php">
                     <li>Register</li>
                 </a>
-                <a href="#about">
+                <a href="./initial_pages/about.php">
                     <li>About</li>
                 </a>
-                <a href="#emergency">
+                <a href="./initial_pages/emergency.php">
                     <li>Emergency numbers</li>
                 </a>
             </ul>
@@ -57,13 +57,13 @@
                 <a href="./initial_pages/login.php">
                     <li>Login</li>
                 </a>
-                <a href="#register">
+                <a href="./initial_pages/register.php">
                     <li>Register</li>
                 </a>
-                <a href="#about">
+                <a href="./initial_pages/about.php">
                     <li>About</li>
                 </a>
-                <a href="#emergency">
+                <a href="./initial_pages/emergency.php">
                     <li>Emergency numbers</li>
                 </a>
             </ul>
