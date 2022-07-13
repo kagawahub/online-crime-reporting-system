@@ -1,47 +1,58 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    // font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: sans-serif;
 }
-body{
-    background-color: white;
+body {
+  background-color: white;
 }
-header{
-//    background-color: rgb(107,181,242);
-   width: 100%;
-   height: auto;
+header {
+  // background-color: rgb(107,181,242);
+  width: 100%;
+  height: auto;
 }
-.caption_container{
+.caption_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    h1{
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        // color: white;
-        font-size: 5.2rem;
-        background: rgba(255, 0, 0, 0.911);
-        width: 100%;
-        padding: 0.7rem;
+    // color: white;
+    font-size: 5.2rem;
+    background: rgba(255, 0, 0, 0.911);
+    // background: yellow;
+    width: 100%;
+    padding: 0.7rem;
 
-        animation-name: colorchange;
-        animation-duration: 20s;
-        animation-iteration-count: infinite;
-    }
+    animation-name: colorchange;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }
 }
-.header_img{
-    img{
-        width: 100%;
-        filter: saturate(150%);
-    }
+.header_img {
+  img {
+    width: 100%;
+    filter: saturate(150%);
+    outline: none;
+  }
 }
-@keyframes colorchange{
-    0%{color: white;}
-    25%{color:Yellow ;}
-    50%{color: white;}
-    75%{color: yellow;}
-    100%{color: white;}
-   
+@keyframes colorchange {
+  0% {
+    color: white;
+  }
+  25% {
+    color: Yellow;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: yellow;
+  }
+  100% {
+    color: white;
+  }
 }

@@ -2,38 +2,39 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../scss/style.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" href="../scss/initial_pages_scss/_login.scss">
+    <link rel="stylesheet" href="../../scss/style.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../scss/initial_pages_scss/_login.scss">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Login</title>
+    <title>Register Step2</title>
+    <link rel="icon" href=".././img/CropCrop/police_barge-used.png" type="image/icon type">
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="../index.php">
+            <a href="../../index.php">
                 <section class="logo">
-                    <img src="../img/CropCrop/police_barge-used.png" alt="police logo">
+                    <img src="../../img/CropCrop/police_barge-used.png" alt="police logo">
                     <h1>Ghana Police Service</h1>
                 </section>
             </a>
             <ul>
-                <a href="../index.php">
+                <a href="../../index.php">
                     <li>Home</li>
                 </a>
-                <a href="#login">
+                <a href="../login.php">
                     <li>Login</li>
                 </a>
-                <a href="./register_pages/register1.php">
+                <a href="./register1.php">
                     <li>Register</li>
                 </a>
-                <a href="./about.php">
+                <a href="../about.php">
                     <li>About</li>
                 </a>
-                <a href="./emergency.php">
+                <a href="../emergency.php">
                     <li>Emergency numbers</li>
                 </a>
             </ul>
@@ -41,59 +42,59 @@
     </header>
     <div class="page_body">
 
-
-        <form class="login_form" action="../user_pages/user_page.php" method="POST">
-            <div class="img">
-                <img src="../img/Cropcrop/police_barge-used.png" alt="">
+        <div class="register_box">
+            <div class="register_sidebar">
+                <section class="steps_section">
+                    <h2>Step 1</h2>
+                    <h2>Step 2</h2>
+                    <h2 class="active_step">Step 3</h2>
+                </section>
+                    <p class="reg_signup_link">Have an account already? <a href="">Login</p></a>
+                
             </div>
+            
 
-            <div class="login_label">LOG IN</div>
-
-            <div class="items">
-                <label for="username">Username</label>
-                <input type="text" placeholder="example: kagawahub121" />
-            </div>
-
-            <div class="items">
-                <label for="password">Password</label>
-                <input type="password" placeholder="***********" required />
-            </div>
-
-            <section class="control_container">
-                <div class="checkbox">
-                    <input type="checkbox">
-                    <label>Remember me</label>
+            <!-- <form class="register_form" action="..processor.php" method="POST"> -->
+            <form class="register1_form" action="../login.php" method="POST">
+                <div class="heading_label">
+                    <h2>SIGN UP</h2>
                 </div>
 
-                <div class="forgot">
-                    <p><a href="#">Forgot Password?</a></p>
+                <div class="user_text">
+                    <p>Upload a passport photo of yourself</p>
                 </div>
-            </section>
 
-            <button class="btn">Login</button>
+                <div class="insider">
+                    <label for="photo">Photo</label>
+                    <input type="file" name="photo" />
+                </div>
 
-            <div class="signup_link">
-                <p>New to the system? <a href="./register_pages/register1.php">Sign up</a></p>
-            </div>
-        </form>
+                <div class="direct_container">
+                    <a href="./register2.php"><div class="step2_button">Previous</div></a>
+
+                    <a href="../login.php"><button   class="step2_button">Next</button></a>
+                </div>
+            </form>
+
+        </div>
     </div>
     <footer>
         <section class="sitemap">
             <h2>Site Map</h2>
             <ul>
-                <a href="../index.php">
+                <a href="../../index.php">
                     <li>Home</li>
                 </a>
-                <a href="#">
+                <a href="../login.php">
                     <li>Login</li>
                 </a>
-                <a href="./register_pages/register1.php">
+                <a href="./register1.php">
                     <li>Register</li>
                 </a>
-                <a href="./about.php">
+                <a href="../about.php">
                     <li>About</li>
                 </a>
-                <a href="./emergency.php">
+                <a href="../emergency.php">
                     <li>Emergency numbers</li>
                 </a>
             </ul>

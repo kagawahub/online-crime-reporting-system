@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crime Reporting System</title>
+    <link rel="icon" href="./img/CropCrop/police_barge-used.png" type="image/icon type">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <nav>
             <a href="#home">
                 <section class="logo">
-                    <img src="./img/Crop crop/police_barge-used.png" alt="police logo">
+                    <img src="./img/Cropcrop/police_barge-used.png" alt="police logo">
                     <h1>Ghana Police Service</h1>
                 </section>
             </a>
@@ -26,7 +27,7 @@
                 <a href="./initial_pages/login.php">
                     <li>Login</li>
                 </a>
-                <a href="./initial_pages/register.php">
+                <a href="../Online Crime Reporting Trials/initial_pages/register_pages/register1.php">
                     <li>Register</li>
                 </a>
                 <a href="./initial_pages/about.php">
@@ -57,7 +58,7 @@
                 <a href="./initial_pages/login.php">
                     <li>Login</li>
                 </a>
-                <a href="./initial_pages/register.php">
+                <a href="../Online Crime Reporting Trials/initial_pages/register_pages/register1.php">
                     <li>Register</li>
                 </a>
                 <a href="./initial_pages/about.php">

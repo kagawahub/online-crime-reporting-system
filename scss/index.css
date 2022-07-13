@@ -37,6 +37,7 @@ header {
 .header_img img {
   width: 100%;
   filter: saturate(150%);
+  outline: none;
 }
 
 @-webkit-keyframes colorchange {

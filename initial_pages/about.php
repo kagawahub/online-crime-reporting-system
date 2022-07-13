@@ -16,7 +16,7 @@
         <nav>
             <a href="../index.php">
                 <section class="logo">
-                    <img src="../img/Crop crop/police_barge-used.png" alt="police logo">
+                    <img src="../img/Cropcrop/police_barge-used.png" alt="police logo">
                     <h1>Ghana Police Service</h1>
                 </section>
             </a>
@@ -27,7 +27,7 @@
                 <a href="./login.php">
                     <li>Login</li>
                 </a>
-                <a href="./register.php">
+                <a href="./register_pages/register1.php">
                     <li>Register</li>
                 </a>
                 <a href="#about">
@@ -57,7 +57,7 @@
                 <a href="./login.php">
                     <li>Login</li>
                 </a>
-                <a href="./register.php">
+                <a href="./register_pages/register1.php">
                     <li>Register</li>
                 </a>
                 <a href="#about">

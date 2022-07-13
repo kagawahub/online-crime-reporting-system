@@ -2,38 +2,39 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../scss/style.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" href="../scss/initial_pages_scss/_login.scss">
+    <link rel="stylesheet" href="../../scss/style.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../scss/initial_pages_scss/_login.scss">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Details</title>
+    <title>Register Step1</title>
+    <link rel="icon" href=".././img/CropCrop/police_barge-used.png" type="image/icon type">
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="../index.php">
+            <a href="../../index.php">
                 <section class="logo">
-                    <img src="../img/Crop crop/police_barge-used.png" alt="police logo">
+                    <img src="../../img/CropCrop/police_barge-used.png" alt="police logo">
                     <h1>Ghana Police Service</h1>
                 </section>
             </a>
             <ul>
-                <a href="../index.php">
+                <a href="../../index.php">
                     <li>Home</li>
                 </a>
-                <a href="./login.php">
+                <a href="../login.php">
                     <li>Login</li>
                 </a>
                 <a href="#">
                     <li>Register</li>
                 </a>
-                <a href="./about.php">
+                <a href="../about.php">
                     <li>About</li>
                 </a>
-                <a href="#emergency">
+                <a href="../emergency.php">
                     <li>Emergency numbers</li>
                 </a>
             </ul>
@@ -41,30 +42,41 @@
     </header>
     <div class="page_body">
 
+        <div class="register_box">
+            <div class="register_sidebar">
+                <section class="steps_section">
+                    <h2 class="active_step">Step 1</h2>
+                    <h2>Step 2</h2>
+                    <h2>Step 3</h2>
+                </section>
+                    <p class="reg_signup_link">Have an account already? <a href="../login.php">Login</p></a>
+                
+            </div>
+            
 
-        <form class="form" action="./processor.php" method="POST">
-            <section class="details_container">
-                <div class="heading_label">
-                    <h2>SIGN UP</h2>
-                </div>
-
-                <div class="container_items">
-                    <div class="insider"> <label for="first_name">Full Name</label>
-                        <input type="text" name="fullname" />
+                 <!-- <form class="register_form" action="../processor.php" method="POST"> -->
+                <form class="register1_form" action="./register2.php" method="POST">
+                    <div class="heading_label">
+                        <h2>SIGN UP</h2>
                     </div>
 
-                    <div class="gender">
-                        <label for="Gender">
-                            <p>Gender</p>
-                        </label>
-                        <div class="radio_btn">
-                            <label for="gender">Male</label>
-                            <input type="radio" value="male" name="gender" />
-                            <label for="gender" value="Female" name="gender">Female</label>
-                            <input type="radio" />
+                    <div class="container_items">
+                        <div class="insider"> <label for="first_name">Full Name</label>
+                            <input type="text" name="fullname" />
+                        </div>
+
+                        <div class="gender">
+                            <label for="Gender">
+                                <p>Gender</p>
+                            </label>
+                            <div class="radio_btn">
+                                <label for="gender">Male</label>
+                                <input type="radio" value="male" name="gender" />
+                                <label for="gender" value="Female" name="gender">Female</label>
+                                <input type="radio" />
+                            </div>
                         </div>
                     </div>
-                </div>
                 <div class="container_items">
                     <div class="insider"> <label for="nationality">Nationality</label>
                         <input type="text" name="nationality" />
@@ -75,8 +87,8 @@
                     </div>
                 </div>
                 <div class="container_items">
-                    <div class="insider"> <label for="city">City</label>
-                        <input type="text" name="city" />
+                    <div class="insider"> <label for="region">Region</label>
+                        <input type="text" name="rigion" />
                     </div>
 
                     <div class="insider"><label for="street_address">Street Address</label>
@@ -101,46 +113,31 @@
                         <input type="text" name="id" />
                     </div>
                 </div>
-            </section>
-            <hr>
-            <section class="user_pass">
-                <div class="insider"><label for="username">Username</label>
-                    <input type="text" name="username" />
-                </div>
-                <div class="insider"><label for="password">Password</label>
-                    <input type="password" name="password" />
-                </div>
-                <div class="last_container">
-                    <div class="insider"><label for="confirm_password">Confirm Password</label>
-                        <input type="password_verify" name="cPassord" />
-                    </div>
-                    <button class="btn2" type="submit" name="submit">Sign up</button>
-                </div>
-
-                <div class="signup_link" id="link">
-                    <p>Already have an account?<a href="./login.php"> Login</a></p>
-                </div>
-            </section>
-
+            
+                <a href="./register2.php">
+                    <button type="submit" class="step1_button">Next</button>
+                </a>                
         </form>
+
+        </div>
     </div>
     <footer>
         <section class="sitemap">
             <h2>Site Map</h2>
             <ul>
-                <a href="../index.php">
+                <a href="../../index.php">
                     <li>Home</li>
                 </a>
-                <a href="./login.php">
+                <a href="../login.php">
                     <li>Login</li>
                 </a>
-                <a href="#register">
+                <a href="#">
                     <li>Register</li>
                 </a>
-                <a href="./about.php">
+                <a href="../about.php">
                     <li>About</li>
                 </a>
-                <a href="./emergency.php">
+                <a href="../emergency.php">
                     <li>Emergency numbers</li>
                 </a>
             </ul>
