@@ -55,7 +55,7 @@
             
 
                  <!-- <form class="register_form" action="../processor.php" method="POST"> -->
-                <form class="register1_form" action="./register3.php" method="POST">
+                <form class="register1_form">
                     <div class="heading_label">
                         <h2>SIGN UP</h2>
                     </div>
@@ -84,7 +84,7 @@
             <div class="direct_container">
                 <a href="./register1.php"><div class="step2_button">Previous</div></a>
 
-                <a href="./register3.php"><button class="step2_button">Next</button></a>
+                <a href="./register3.php"><div class="step2_button">Next</div></a>
             </div>      
         </form>
 

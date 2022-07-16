@@ -1,3 +1,44 @@
+<?php
+
+if (isset($_POST['submit'])) {
+
+
+//declare form vaiables
+$fullname = $_POST['fullname'];
+$gender = $_POST['gender'];
+$nationality = $_POST['nationality'];
+$dob = $_POST['dob'];
+$region = $_POST['region'];
+$streetAddress = $_POST['streetAddress'];
+$phone = $_POST['phone'];
+$occupation = $_POST['occupation'];
+$email = $_POST['email'];
+$nationality = $_POST['nationality'];
+
+if ($fullname == null || empty(fullname)) {
+    echo $msg = "Fullname is required";
+    
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,7 +96,9 @@
             
 
                  <!-- <form class="register_form" action="../processor.php" method="POST"> -->
-                <form class="register1_form" action="./register2.php" method="POST">
+                <form class="register1_form" action="register1_form.php" method="POST">
+                    <small><?php if ($msg != null) {echo $msg;}?></small>
+
                     <div class="heading_label">
                         <h2>SIGN UP</h2>
                     </div>
@@ -114,9 +157,7 @@
                     </div>
                 </div>
             
-                <a href="./register2.php">
-                    <button type="submit" class="step1_button">Next</button>
-                </a>                
+                    <a href="./register2.php"><div class="step1_button">Next</div></a>              
         </form>
 
         </div>

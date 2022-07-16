@@ -3,13 +3,13 @@
   // flex-direction: column;
 }
 .direct_container {
-width: 27rem;
-//   background: red;
+  width: 27rem;
+  //   background: red;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.user_container{
+.user_container {
   // background: red;
   height: 13rem;
   display: flex;
@@ -18,17 +18,18 @@ width: 27rem;
   align-items: center;
   font-size: 18px;
 }
-.user_text{
-    font-size: 17px;
-    padding: .5rem;
-    color: #002e5b;
-    background: rgba(255, 255, 255, 0.774);
-    text-align: center;
-    // background: red;
-    border-radius: 7px;
-  }
+.user_text {
+  font-size: 17px;
+  padding: 0.5rem;
+  color: #002e5b;
+  background: rgba(255, 255, 255, 0.774);
+  text-align: center;
+  // background: red;
+  border-radius: 7px;
+}
 .step2_button {
-//   margin: 10px 0 10px 0rem;
+  //   margin: 10px 0 10px 0rem;
+  text-align: center;
   width: 85px;
   height: 2rem;
   background: white;
@@ -46,6 +47,4 @@ width: 27rem;
     background: #002e5b;
     border: 1px solid white;
   }
-  
 }
-

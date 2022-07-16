@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="./scss/user_pages_scss/_user_page.scss">
     <link rel="stylesheet" href="./scss/style.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <meta charset="UTF-8">
