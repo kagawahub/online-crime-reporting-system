@@ -25,7 +25,7 @@
   align-items: center;
 }
 .emergency_text {
-  padding: 1rem 8rem;
+  padding: 2rem 8rem;
   font-size: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -44,6 +44,7 @@ img {
   gap: 2.5rem;
 }
 .emer1_items {
+  margin-top: 1.5rem;
   // background: blue;
   background-image: url(./../../img/Cap4.PNG);
   height: 32em;
