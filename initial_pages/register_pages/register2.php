@@ -65,7 +65,6 @@ $msg = 0;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Step2</title>
     <link rel="icon" href=".././img/CropCrop/police_barge-used.png" type="image/icon type">
-    <script type="text/javascript" src="../../main.js"></script>
 </head>
 
 <body>
@@ -124,17 +123,17 @@ $msg = 0;
 
                 <div class="user_container">
                     <div class="insider">
-                        <label for="username">Email</label>
-                        <input type="email" name="email" value="<?php if(isset($submit)){echo $email;}?>" />
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" value="<?php if(isset($submit)){echo $email;}?>" />
                     </div>
 
                     <div class="insider">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" />
+                        <label for="password_js">Password</label>
+                        <input type="password" name="password" id="password_js" />
                     </div>
                         
                     <div class="checkbox0">
-                        <input type="checkbox" onclick="showpassword()" id="showPassword" /><h5>Show password</h5>
+                        <input type="checkbox" id="checkbox_js" /><label for="checkbox_js">Show password</label>
                     </div>
                 </div>
 
@@ -198,5 +197,21 @@ $msg = 0;
         </section>
     </footer>
 </body>
+<script>
+    const checkbox = document.getElementById("checkbox_js");
+    const password = document.getElementById("password_js");
+
+    checkbox.addEventListener("click" , changePasswordInputType)
+    function changePasswordInputType(){
+        if(checkbox.checked === true){
+        password.type='text';
+    }
+    else{
+        password.type='password';
+    }
+    }
+    
+
+</script>
 
 </html>

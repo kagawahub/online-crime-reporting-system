@@ -77,18 +77,18 @@ include("../connection.php");
 
         <div class="items">
           <label for="email">Email</label>
-          <input type="text" placeholder="Email-Address" name="email"/>
+          <input type="text" placeholder="Email-Address" name="email" id="email"/>
         </div>
 
         <div class="items">
-          <label for="password" >Password</label>
-          <input type="password" placeholder="***********" name="password"/>
+          <label for="password_js" >Password</label>
+          <input type="password" placeholder="***********" name="password" id="password_js"/>
         </div>
 
         <section class="control_container">
           <div class="checkbox">
-            <input type="checkbox" />
-            <label>Show password</label>
+            <input type="checkbox" id="checkbox_js" />
+            <label for='checkbox_js'>Show password</label>
           </div>
 
           <div class="forgot">
@@ -169,4 +169,19 @@ include("../connection.php");
       </section>
     </footer>
   </body>
+  <script>
+    const checkbox = document.getElementById("checkbox_js");
+    // console.log(checkbox);
+
+    const password = document.getElementById("password_js");
+    // console.log(password);
+
+    checkbox.addEventListener('click', () => {
+      if(checkbox.checked === true){
+        password.type = 'text';
+      }else {
+        password.type = 'password';
+      }
+    })
+  </script>
 </html>

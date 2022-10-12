@@ -1285,6 +1285,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: auto;
 }
 .adminpost_box h2 {
   background: rgba(0, 46, 91, 0.7);
@@ -1354,8 +1355,20 @@ img {
 .newPost_container .attachment span {
   font-weight: 600;
 }
+.postsLabel {
+  margin-top: 3rem;
+  color: green;
+}
+
 .posts_container {
-  background: pink;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.posts_container .post_item {
+  background: yellow;
+  margin-bottom: 2rem;
 }
 
 .fpPage_body {

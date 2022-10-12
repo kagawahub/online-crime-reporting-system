@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: auto;
   h2 {
     background: rgba(0, 46, 91, 0.7);
     background: red;
@@ -77,6 +78,20 @@
     }
   }
 }
+
+//Post History
+.postsLabel {
+  margin-top: 3rem;
+  color: green;
+}
 .posts_container {
-  background: pink;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  .post_item {
+    background: yellow;
+    margin-bottom: 2rem;
+  }
 }

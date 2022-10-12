@@ -22,10 +22,10 @@
           <h3>Bossman Owusu</h3>
           <p style="color: white; font-size:16px; text-align: left;">Admin</p>
         </div>
-        <a href="#"><i class="fa fa-caret-down"></i></a>
+        <a href="#"><i class="fa fa-caret-down" id="dropdown_js"></i></a>
       </div>
-      <div class="dropdown_menu">
-        <ul>
+      <div class="dropdown_menu" >
+        <ul id="dropdown_list">
           <li><a href="#">Notifications</a></li>
           <li><a href="#">Profile</a></li>
           <li><a href="#">Logout</a></li>
@@ -168,4 +168,15 @@
       </div>
     </section>
   </body>
+  <script>
+    const dropdown = document.getElementById("dropdown_js");
+    const myDropdown_list = document.getElementById("dropdown_list");
+
+
+    function dropdownMenu(){
+      myDropdown_list.classList.toggle("show");
+    }
+
+    dropdown.addEventListener("click", dropdownMenu);
+  </script>
 </html>
