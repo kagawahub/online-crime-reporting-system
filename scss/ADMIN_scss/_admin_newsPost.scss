@@ -1,0 +1,82 @@
+.adminpost_box {
+  padding: 1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    background: rgba(0, 46, 91, 0.7);
+    background: red;
+    color: yellow;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 7px;
+  }
+  h3 {
+    color: rgba(0, 46, 91);
+    margin-bottom: 0.5rem;
+    hr {
+      color: red;
+    }
+  }
+  button {
+    background: red;
+    padding: 0.3rem 1rem;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 22.8rem;
+    margin-top: 0.2rem;
+    border-radius: 4px;
+  }
+}
+.newPost_container {
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 1rem;
+  width: 30rem;
+  margin-bottom: 1.5rem;
+  .binder {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+
+    h3 {
+      color: rgb(0, 46, 92);
+    }
+    input {
+      height: 25px;
+      outline: none;
+      padding: 0.3rem;
+      text-align: center;
+      font-weight: 900;
+      font-size: 18px;
+      color: red;
+    }
+    textarea {
+      resize: none;
+      outline: none;
+      padding: 0.3rem;
+    }
+  }
+  .attachment {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background: rgba(0, 46, 91, 0.938);
+    // border: 2px solid green;
+    gap: 1rem;
+    width: 27rem;
+    text-align: left;
+    padding: 3px 3px 5px 5px;
+    margin: -0.45rem 0 0 0.5rem;
+
+    span {
+      font-weight: 600;
+    }
+    input {
+    }
+  }
+}
+.posts_container {
+  background: pink;
+}

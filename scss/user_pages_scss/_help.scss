@@ -1,0 +1,36 @@
+.border_wrap {
+  //   background-color: red;
+  border: 1px solid red;
+  height: auto;
+  width: 50rem;
+  border-radius: 8px;
+  padding: 1rem;
+  translate: 7%;
+  h1 {
+    color: rgb(0, 46, 92);
+    // border-bottom: 2px solid red;
+    hr {
+      width: 65px;
+      color: rgb(0, 46, 92);
+      //   margin-bottom: 1rem;
+    }
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    .question {
+      background: rgb(0, 46, 92);
+      color: white;
+      height: 45px;
+      padding: .8rem 0 .8rem .5rem;
+      font-weight: 600;
+      font-size: 20px;
+
+    }
+    .answer {
+      padding: .5rem .5rem;
+      font-size: 18.5px;
+    }
+  }
+}

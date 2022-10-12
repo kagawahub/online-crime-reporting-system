@@ -1,0 +1,102 @@
+.adminLogin_body {
+  background: whitesmoke;
+  .form_name {
+    color: yellow;
+    background: red;
+    border: 2px solid #002e5b;
+    height: 3rem;
+    width: 22rem;
+    translate: 143% 143%;
+    text-align: center;
+    h2 {
+      font-size: 35px;
+      padding-top: 0.1rem;
+    }
+  }
+  form {
+    background: #002e5b;
+    height: 27rem;
+    width: 22rem;
+    translate: 143% 16%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .inner_top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        color: white;
+        margin-top: 5px;
+      }
+      .icon_container {
+        margin-top: 0.7rem;
+        background: white;
+        color: black;
+        height: 4rem;
+        width: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        i {
+          margin-bottom: 3px;
+          font-size: 3.5rem;
+        }
+      }
+    }
+
+    .inner_middle {
+      margin-top: 2rem;
+      gap: 1rem;
+
+      .wrap {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        label {
+          color: white;
+          font-size: 18px;
+        }
+        input {
+          height: 2.2rem;
+          width: 16rem;
+          border-radius: 7px;
+          padding-left: 0.5rem;
+          font-size: 17px;
+        }
+      }
+    }
+
+    .inner_bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+
+      :hover {
+        color: white;
+        background: rgb(0, 46, 91);
+      }
+
+      button {
+        margin-top: 0.5rem;
+        color: rgb(0, 46, 91);
+        height: 2.3rem;
+        width: 5.5rem;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 6px;
+      }
+      a {
+        color: yellow;
+        text-decoration: none;
+      }
+    }
+  }
+}

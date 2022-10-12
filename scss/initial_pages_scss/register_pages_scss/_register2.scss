@@ -1,0 +1,60 @@
+// .user_container {
+//   // display: flex;
+//   // flex-direction: column;
+// }
+.direct_container {
+  width: 27rem;
+  //   background: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user_container {
+  // background: red;
+  height: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 18px;
+}
+.user_text {
+  font-size: 17px;
+  padding: 0.5rem;
+  color: #002e5b;
+  background: rgba(255, 255, 255, 0.774);
+  text-align: center;
+  // background: red;
+  border-radius: 7px;
+}
+.checkbox0 {
+  display: flex;
+  font-size: 14px;
+  gap: 0.1rem;
+
+  input {
+    height: 14px;
+    width: 14px;
+  }
+}
+.step2_button {
+  //   margin: 10px 0 10px 0rem;
+  text-align: center;
+  width: 85px;
+  height: 2rem;
+  background: white;
+  // padding: 6px 6px;
+  border-radius: 5px;
+  border: none;
+  color: #002e5b;
+  // margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  &:hover {
+    color: white;
+    background: #002e5b;
+    border: 1px solid white;
+  }
+}

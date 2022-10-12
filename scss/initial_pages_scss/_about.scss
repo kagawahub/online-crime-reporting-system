@@ -1,0 +1,45 @@
+.about_body{
+    background: white;
+    width: auto;
+    // height: 35em;
+    height: auto;
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+    // justify-content: first baseline;
+    // align-items: center;
+}
+.about_heading{
+    color: #002e5b;
+    background: rgba(255, 255, 0, 0.938);
+    height: 21rem;
+    width: 100%;
+    font-size: 80px;
+    font-weight: 900;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section_text{
+    background: rgba(245, 222, 179, 0.459);
+    padding: 2.5rem 20rem;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    // text-align: center;
+    font-weight: 600;
+
+    section{
+        margin-bottom: 2rem;
+        ul{
+            margin-top: 1rem;
+            margin-left: 1.5rem;
+        }
+        h2{
+            color: red;
+        }
+    }
+    
+}

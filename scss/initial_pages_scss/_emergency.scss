@@ -1,0 +1,125 @@
+.emergency_body {
+  background: rgba(245, 222, 179, 0.459);
+  // background: red;
+  width: auto;
+  height: 35em;
+  height: auto;
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+}
+.emergency_heading {
+  color: #002e5b;
+  background: rgba(255, 255, 0, 0.938);
+  height: 60%;
+  height: 21rem;
+  width: 100%;
+  font-size: 80px;
+  font-weight: 900;
+  text-align: justify;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.emergency_text {
+  padding: 2rem 8rem;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+img {
+  float: right;
+  // margin: 9px 6px;
+}
+.emer_container {
+  // background: rgba(245, 222, 179, 0.192);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  gap: 2.5rem;
+}
+.emer1_items {
+  margin-top: 1.5rem;
+  // background: blue;
+  background-image: url(./../../img/Cap4.PNG);
+  height: 32em;
+  width: 70rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+}
+
+.emer2_items {
+  // background: brown;
+  background-image: url(./../../img/fire_background.png);
+  height: 32em;
+  width: 70rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid brown;
+}
+
+.emer3_items {
+  // background: green;
+  background-image: url(./../../img/CropCrop/Ambulances8.PNG);
+  height: 32em;
+  width: 70rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
+}
+
+.inside_box {
+  height: 24rem;
+  width: 39rem;
+  background: rgba(0, 46, 91, 0.87);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 100px;
+    width: 100px;
+  }
+
+  h1 {
+    color: yellow;
+    background: red;
+    width: 10rem;
+    height: 6rem;
+    font-size: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .service_name {
+    // background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      color: white;
+      font-size: 25px;
+      font-weight: 700;
+    }
+  }
+}
