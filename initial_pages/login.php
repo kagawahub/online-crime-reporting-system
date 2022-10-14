@@ -7,7 +7,7 @@ include("../connection.php");
 		$email = $_POST['email'];
 		$password = $_POST['password'];
 		
-		$stmt = "SELECT * FROM user_data2 WHERE  email = '$email' AND password = '$password' ";
+		$stmt = "SELECT * FROM user_data WHERE  email = '$email' AND password = '$password' ";
  		$query = $conn->query($stmt);
 		$column = $query->fetchColumn();
 
