@@ -1,6 +1,33 @@
+<?php
+include("../connection.php");
+
+$dbconn = mysqli_connect('localhost','root','','ocrs_db');
+if (!$dbconn) {
+  echo "not connected";
+}else {
+  echo "connected";
+}
+
+
+// $query data from database
+    $sql= "SELECT * FROM reports";
+
+    $query= mysqli_query($dbconn, $sql);
+    // $result=mysqli_fetch_row($query);
+    // while($row = mysqli_fetch_assoc($query)){
+    //   echo $row['id'];
+    // }
+    
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="../scss/style.scss">
+    <link rel="stylesheet" href="../scss/ADMIN_scss/_admin_records.scss">
     <link rel="stylesheet" href="../scss/ADMIN_scss/admin_dashboard.css">
     <link rel="stylesheet" href="../awesome_font/font-awesome.min.css" />
     <meta charset="UTF-8" />
@@ -28,6 +55,7 @@
         <ul>
           <li><a href="#">Notifications</a></li>
           <li><a href="#">Profile</a></li>
+          <li><a href="#">Add an admin</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
       </div>
@@ -42,18 +70,18 @@
         </div>
 
         <div class="navi_item">
-          <a href="#" class="navi_a"
-            ><h2>Records</h2>
+          <a href="./admin_reports.php" class="navi_a"
+            ><h2>Reports</h2>
             <div class="admin_icon">
-              <i class="fa fa-server"></i></div
+              <i class="fa fa-file-text"></i></div
           ></a>
         </div>
 
         <div class="navi_item">
-          <a href="./admin_officers.php" class="navi_a"
-            ><h2>Officers</h2>
+          <a href="#" class="navi_a"
+            ><h2>Records</h2>
             <div class="admin_icon">
-              <i class="fa fa-user-secret"></i></div
+              <i class="fa fa-server"></i></div
           ></a>
         </div>
 
@@ -90,9 +118,62 @@
         </div>
           
       </div>
-      <div class="dashboard_content">
+      <!-- <php echo $row[0] ?> -->
+      <div class="dashboard_content records_container">
+                <table>
+                  <tr>
+                    <th>Action</th>
+                    <th>Status</th>
+                    <th>DateTime Reported</th>
+                    <th>Type of Incidence</th>
+                    <th>Date of Incidence</th>
+                    <th>Time of Incidence</th>
+                    <th>City</th>
+                    <th>Location</th>
+                    <th>Tools</th>
+                  </tr>
+                  <?php
+                    // $rows = mysqli_num_rows($query);
+                    foreach ($query as $row){
+                      // echo $row['id'];
+                    
+                    ?>
+                      <tr>
+                      <td><input type="checkbox" id="action_check"></td>
+                      <td id="change_Name">Pending</td>
+                      <td><?php echo $row['reporting_time'] ?></td>
+                      <td><?php echo $row['crime_type'] ?></td>
+                      <td><?php echo $row['date_of_incidence'] ?></td>
+                      <td><?php echo $row['time_of_incidence'] ?></td>
+                      <td><?php echo $row['city'] ?></td>
+                      <td><?php echo $row['location'] ?></td>
+                      <td>
+                        <button class="editb"><i class="fa fa-edit"></i></button>
+                        <button class="deleteb"><i class="fa fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    
+                    <?php
+                    }
+                  ?>
+                  
+                </table>
         
       </div>
     </section>
   </body>
+  <script>
+    const checkbox = document.getElementById("action_check");
+    // console.log(checkbox);
+    const action = document.getElementById("action_name");
+    // console.log(action);
+
+    checkbox.addEventListener('click', () => {
+      if(checkbox.checked === true){
+        action.innerHTML = 'Confirmed';
+      }else {
+        action.innerHTML = 'Pending';
+      }
+    })
+  </script>
 </html>

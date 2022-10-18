@@ -1,0 +1,42 @@
+.adminSignUp_body {
+  background: white;
+  form {
+    background: rgb(0, 46, 92);
+    color: white;
+    width: 23rem;
+    height: 25rem;
+    translate: 127% 20%;
+    border-radius: 15px;
+
+    h2 {
+      color: red;
+      text-align: center;
+      padding-top: 3rem;
+    }
+
+    .create_container {
+      margin-top: 4rem;
+      // background: red;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      label {
+        font-size: 20px;
+        margin-right: 9rem;
+      }
+      .createInput {
+        width: 15rem;
+        height: 1.8rem;
+        border-radius: 10px;
+      }
+    }
+
+    .createButton {
+      background: yellow;
+      color: red;
+      font-size: 19px;
+    }
+  }
+}

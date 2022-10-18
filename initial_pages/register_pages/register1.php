@@ -59,7 +59,7 @@ error_reporting(0);
             header('location:register2.php');
 
         }else{
-             $msg = "Check your detailes";
+             $msg = "Check your details";
           
         }
 
@@ -123,17 +123,13 @@ error_reporting(0);
                     <p class="reg_signup_link">Have an account already? <a href="../login.php">Login</p></a>
                 
             </div>
-            
 
-                 <!-- <form class="register_form" action="../processor.php" method="POST"> -->
                 <form class="register1_form" action="" method="POST">
                     <small style="color: red;" ><?php if ($msg != null) {echo $msg;}?></small>
 
                     <div class="heading_label">
                         <h2>SIGN UP</h2>
                     </div>
-
-<!-- <a href="../../connection.php"></a> -->
 
                     <div class="container_items">
                         <div class="insider"> <label for="first_name">Full Name</label>

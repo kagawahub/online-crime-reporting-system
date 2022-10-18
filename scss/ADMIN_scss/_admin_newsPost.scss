@@ -21,13 +21,14 @@
     }
   }
   button {
-    background: red;
+    background: rgba(0, 46, 91);
     padding: 0.3rem 1rem;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    margin-left: 22.8rem;
+    margin-left: 22.6rem;
     margin-top: 0.2rem;
     border-radius: 4px;
+    cursor: pointer;
   }
 }
 .newPost_container {
@@ -65,10 +66,10 @@
     color: white;
     background: rgba(0, 46, 91, 0.938);
     // border: 2px solid green;
-    gap: 1rem;
+    // gap: 1rem;
     width: 27rem;
     text-align: left;
-    padding: 3px 3px 5px 5px;
+    padding: 3px 0px 5px 5px;
     margin: -0.45rem 0 0 0.5rem;
 
     span {
@@ -93,5 +94,6 @@
   .post_item {
     background: yellow;
     margin-bottom: 2rem;
+    padding: 2rem;
   }
 }

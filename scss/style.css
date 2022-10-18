@@ -932,6 +932,44 @@ img {
   font-size: 18.5px;
 }
 
+.adminSignUp_body {
+  background: white;
+}
+.adminSignUp_body form {
+  background: rgb(0, 46, 92);
+  color: white;
+  width: 23rem;
+  height: 25rem;
+  translate: 127% 20%;
+  border-radius: 15px;
+}
+.adminSignUp_body form h2 {
+  color: red;
+  text-align: center;
+  padding-top: 3rem;
+}
+.adminSignUp_body form .create_container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.adminSignUp_body form .create_container label {
+  font-size: 20px;
+  margin-right: 9rem;
+}
+.adminSignUp_body form .create_container .createInput {
+  width: 15rem;
+  height: 1.8rem;
+  border-radius: 10px;
+}
+.adminSignUp_body form .createButton {
+  background: yellow;
+  color: red;
+  font-size: 19px;
+}
+
 .adminLogin_body {
   background: whitesmoke;
 }
@@ -1279,6 +1317,45 @@ img {
   text-decoration: none;
 }
 
+.records_container {
+  padding: 0.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid rgb(221, 221, 221);
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background: rgb(0, 46, 91);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(221, 221, 221);
+}
+
+button {
+  padding: 0.5rem;
+  color: white;
+  border-radius: 45%;
+}
+
+.editb {
+  background: green;
+}
+
+.deleteb {
+  background: rgba(255, 0, 0, 0.856);
+}
+
 .adminpost_box {
   padding: 1.5rem 5rem;
   display: flex;
@@ -1303,13 +1380,14 @@ img {
   color: red;
 }
 .adminpost_box button {
-  background: red;
+  background: rgb(0, 46, 91);
   padding: 0.3rem 1rem;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
-  margin-left: 22.8rem;
+  margin-left: 22.6rem;
   margin-top: 0.2rem;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .newPost_container {
@@ -1346,10 +1424,9 @@ img {
   justify-content: center;
   color: white;
   background: rgba(0, 46, 91, 0.938);
-  gap: 1rem;
   width: 27rem;
   text-align: left;
-  padding: 3px 3px 5px 5px;
+  padding: 3px 0px 5px 5px;
   margin: -0.45rem 0 0 0.5rem;
 }
 .newPost_container .attachment span {
@@ -1369,6 +1446,7 @@ img {
 .posts_container .post_item {
   background: yellow;
   margin-bottom: 2rem;
+  padding: 2rem;
 }
 
 .fpPage_body {

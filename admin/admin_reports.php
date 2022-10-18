@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="../scss/ADMIN_scss/_admin_records.scss">
-    <link rel="stylesheet" href="../scss/style.scss">
     <link rel="stylesheet" href="../scss/ADMIN_scss/admin_dashboard.css">
+    <link rel="stylesheet" href="../scss/ADMIN_scss/_admin_records.scss" />
     <link rel="stylesheet" href="../awesome_font/font-awesome.min.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Users</title>
+    <title>Reports</title>
   </head>
   <body class="admin_body">
     <nav class="sidebar">
@@ -45,7 +44,7 @@
         </div>
 
         <div class="navi_item">
-          <a href="./admin_reports.php" class="navi_a"
+          <a href="#" class="navi_a"
             ><h2>Reports</h2>
             <div class="admin_icon">
               <i class="fa fa-file-text"></i></div
@@ -69,7 +68,7 @@
         </div>
 
         <div class="navi_item">
-          <a href="#" class="navi_a"
+          <a href="./admin_users.php" class="navi_a"
             ><h2>Users</h2>
             <div class="admin_icon">
               <i class="fa fa-users"></i></div
@@ -89,19 +88,19 @@
           <h2>DASHBOARD</h2>
         </div>
         <div class="home_details">
-          <h3><span class="home_color">Home</span> / Users</h3>
+          <h3><span class="home_color">Home</span> / Reports</h3>
         </div>
           
       </div>
       <div class="dashboard_content records_container">
                 <table>
                   <tr>
-                    <th>Name</th>
-                    <th>Gender</th>
-                    <th>Date of Birth</th>
-                    <th>Nationality</th>
+                    <th>Reporting Time</th>
+                    <th>Crime Type</th>
+                    <th>Crime Description</th>
+                    <th>Date of Incidence</th>
+                    <th>Time of Incidence</th>
                     <th>Region</th>
-                    <th>Phone</th>
                     <th>Email</th>
                     <th>Tools</th>
                   </tr>
@@ -127,8 +126,8 @@
                     <td>f</td>
                     <td>g</td>
                     <td>
-                      <button class="editb"><i class="fa fa-edit"></i></button>
-                      <button class="deleteb"><i class="fa fa-trash"></i></button>
+                      <button name="submit" class="editb"><i class="fa fa-edit"></i></button>
+                      <button name="submit" class="deleteb"><i class="fa fa-trash"></i></button>
                     </td>
                   </tr>                  
                   <tr>
@@ -140,8 +139,8 @@
                     <td>f</td>
                     <td>g</td>
                     <td>
-                      <button class="editb"><i class="fa fa-edit"></i></button>
-                      <button class="deleteb"><i class="fa fa-trash"></i></button>
+                      <button name="submit" class="editb"><i class="fa fa-edit"></i></button>
+                      <button name="submit" class="deleteb"><i class="fa fa-trash"></i></button>
                     </td>
                   </tr>                  
                   <tr>

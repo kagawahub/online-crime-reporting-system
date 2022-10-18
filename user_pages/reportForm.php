@@ -1,3 +1,88 @@
+<?php
+include("../connection.php");
+
+// error_reporting(0);
+$msg=0;
+
+session_start();
+    if(isset($_POST['submit'])){
+        //declare post variables of form
+        $date_of_incidence=$_POST['date_of_incidence'];
+        $time_of_incidence=$_POST['time_of_incidence'];
+        $city=$_POST['city'];
+        $location=$_POST['location'];
+        $crime_type = $_POST['crime_type'];
+        $description_box=$_POST['description_box'];
+        $attachment=$_POST['attachment'];
+        $witness=$_POST['witness'];
+        $witness_info_box=$_POST['witness_info_box'];
+
+        //session data for report
+        $_SESSION['date_of_incidence'] = $date_of_incidence;
+        $_SESSION['time_of_incidence'] = $time_of_incidence;
+        $_SESSION['city'] = $city;
+        $_SESSION['location'] = $location;
+        $_SESSION['crime_type'] = $crime_type;
+        $_SESSION['description_box'] = $description_box;
+        $_SESSION['attachment'] = $attachment;
+        $_SESSION['witness'] = $witness;
+        $_SESSION['witness_info_box'] = $witness_info_box;
+
+        //submit button varables
+        $submit = $_POST['submit'];
+
+        if($date_of_incidence == "" || $time_of_incidence == "" || $city == "" || $location == "" || $crime_type == ""){
+            $msg="All field is required";
+        }
+
+        // if (!preg_match("/[a-zA-Z]/", $city) || !preg_match("/[a-zA-Z]/", $region) ) {
+        //     $msg = "Field support only text characters";
+        // }
+
+        // if ($msg <= 0) {
+           
+        //     header('location:./reportForm.php');
+
+        // }else{
+        //      $msg = "Check your details";
+          
+        // }
+
+        if ($msg <= 0) {
+       // echo"insert";
+        //call session data for report data
+        $date_of_incidence=$_POST['date_of_incidence'];
+        $time_of_incidence=$_POST['time_of_incidence'];
+        $city=$_POST['city'];
+        $location=$_POST['location'];
+        $crime_type=$_POST['crime_type'];
+        $description_box=$_POST['description_box'];
+        $attachment=$_POST['attachment'];
+        $witness=$_POST['witness'];
+        $witness_info_box=$_POST['witness_info_box'];
+
+
+        //Save report data
+        $insert = "INSERT INTO `reports`(`date_of_incidence`, `time_of_incidence`, `city`, `location`, `crime_type`, `description`, `attachment`, `witness`, `witness_details`) VALUES ('$date_of_incidence','$time_of_incidence','$city','$location','$description_box','$attachment','$witness','$witness_info_box')";
+
+            $results = $conn->exec($insert);
+                if($results){
+                    $msg = $_SESSION['msg'] = "Your report has been submited successfully";
+                     header('location:./reportForm.php');
+                }else{
+                   // echo"Don't redirect";
+                   // header("location:./register3.php");
+                }
+
+    }else{
+        // echo"Dont insert";
+    }
+
+    }
+?>
+
+
+
 <html lang="en">
   <head>
     <link rel="stylesheet" href="../scss/style.css" />
@@ -76,7 +161,7 @@
       <div class="page_title">REPORT FORM</div>
       <div class="main_content">
          <div class="report_form">
-        <form action="#report">
+        <form action="#report" method="POST">
           <div class="title">Incidence Report</div>
             <section class="section_part_grid">
 
@@ -112,10 +197,10 @@
               <div class="dropdown_list">
                 <div class="label_position">
                   <label for="c.t">Crime Type</label>
-                    <select name="crime-type" class="combo_box">
+                    <select name="crime_type" class="combo_box" onChange="display(this.value)">
                       <option value="select" name="crime_type">Select</option>
                       <option value="robbery" name="crime_type">Robbery</option>
-                      <option value="theft">Theft</option>
+                      <option value="theft" name="crime_type">Theft</option>
                       <option value="rape" name="crime_type">Rape</option>
                       <option value="arson" name="crime_type">Arson</option>
                       <option value="fraud" name="crime_type">Fraud</option>
@@ -133,14 +218,25 @@
                   
                   <div class="attachment_box">
               <label for="Attachment"><span> Attachment:</span> Add a file</label>
-              <input type="file">
+              <input type="file" name="attachment">
             </div>
 
               </div>
               
             </section>
-
-
+            //$query data from database
+               <!-- $sql= "select * from reports"
+               $query = ($conn,sql)
+               $result=mysql_fetch_all()
+                table
+                td
+                th
+                tr
+                foreach ($result as $row){
+                  <tr><php echo $row[0] ?>
+                }
+                tr
+                table -->
               <div class="title wit">Witnesses</div>
               <div class="witnesses">
                 <p>Were there any witnesses to the incident?</p>

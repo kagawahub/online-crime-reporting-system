@@ -42,18 +42,18 @@
         </div>
 
         <div class="navi_item">
-          <a href="./admin_records.php" class="navi_a"
-            ><h2>Records</h2>
+          <a href="./admin_reports.php" class="navi_a"
+            ><h2>Reports</h2>
             <div class="admin_icon">
-              <i class="fa fa-server"></i></div
+              <i class="fa fa-file-text"></i></div
           ></a>
         </div>
 
         <div class="navi_item">
-          <a href="./admin_officers.php" class="navi_a"
-            ><h2>Officers</h2>
+          <a href="./admin_records.php" class="navi_a"
+            ><h2>Records</h2>
             <div class="admin_icon">
-              <i class="fa fa-user-secret"></i></div
+              <i class="fa fa-server"></i></div
           ></a>
         </div>
 
@@ -109,7 +109,7 @@
             </div>
             <div class="attachment">
               <h4>
-                <span>Attachment:</span> Add a file
+                <span>Attachment:</span> Upload file
               </h4>
               <input type="file">
             </div>

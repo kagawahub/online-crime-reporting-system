@@ -2,6 +2,7 @@
 include("../../connection.php");
 $msg=0;
 session_start();
+// move_uploaded_file(photo, photo);
 
 if (isset($_POST['submit'])) {
     $photo = $_POST['photo'];
@@ -25,7 +26,7 @@ if (isset($_POST['submit'])) {
         $streetAddress = $_SESSION['streetAddress'];
         $phone = $_SESSION['phone'];
         $national_id = $_SESSION['national_id'];
-        //$email = $_SESSION['email'];
+        $email = $_SESSION['email'];
         $password = $_SESSION['password'];
         $photo = $_SESSION['photo'];
 
@@ -77,7 +78,6 @@ if (isset($_POST['submit'])) {
             </a>
             <ul>
                 <a href="../../index.php">
-                    <!-- <a href=""></a> -->
                     <li>Home</li>
                 </a>
                 <a href="../login.php">
@@ -110,7 +110,7 @@ if (isset($_POST['submit'])) {
             
 
             
-            <form class="register1_form" method="POST" action=" ">
+            <form class="register1_form" method="POST" action=" " enctype="multipart/form-data">
                 <div class="heading_label">
                     <h2>SIGN UP</h2>
                      <small style="color: red;" ><?php if ($msg != null) {echo $msg;}?></small>
@@ -126,7 +126,7 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div class="insider">
-                    <label for="photo">Photo</label>
+                    <label for="photo">Upload photo</label>
                     <input type="file" name="photo" />
                 </div>
 
@@ -189,6 +189,10 @@ if (isset($_POST['submit'])) {
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9735558734865!2d-0.1888890857310853!3d5.570927595960935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a7d588b5833%3A0xb1138c9b28557412!2sGhana%20Police%20Headquarters!5e0!3m2!1sen!2sgh!4v1654725275138!5m2!1sen!2sgh" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </footer>
+
+    <script>
+        src
+    </script>
 </body>
 
 </html>

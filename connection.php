@@ -3,6 +3,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 
+global $conn;
   $conn = new PDO("mysql:host=$servername;dbname=ocrs_db", $username, $password);
 
   // set the PDO error mode to exception

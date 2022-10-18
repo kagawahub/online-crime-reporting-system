@@ -1,0 +1,33 @@
+.records_container {
+  //   background: green;
+  padding: 0.5rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid rgb(221, 221, 221);
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background: rgb(0, 46, 91);
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: rgb(221, 221, 221);
+}
+button {
+  padding: 0.5rem;
+  color: white;
+  border-radius: 45%;
+}
+
+.editb {
+  background: green;
+}
+.deleteb {
+  background: rgba(255, 0, 0, 0.856);
+}
