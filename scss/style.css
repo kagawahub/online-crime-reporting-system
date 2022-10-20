@@ -1317,10 +1317,6 @@ img {
   text-decoration: none;
 }
 
-.records_container {
-  padding: 0.5rem;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -1346,6 +1342,11 @@ button {
   padding: 0.5rem;
   color: white;
   border-radius: 45%;
+}
+
+.butContainer {
+  display: flex;
+  gap: 3px;
 }
 
 .editb {

@@ -9,7 +9,7 @@ session_start();
         //declare post variables of form
         $date_of_incidence=$_POST['date_of_incidence'];
         $time_of_incidence=$_POST['time_of_incidence'];
-        $city=$_POST['city'];
+        $region=$_POST['region'];
         $location=$_POST['location'];
         $crime_type = $_POST['crime_type'];
         $description_box=$_POST['description_box'];
@@ -20,7 +20,7 @@ session_start();
         //session data for report
         $_SESSION['date_of_incidence'] = $date_of_incidence;
         $_SESSION['time_of_incidence'] = $time_of_incidence;
-        $_SESSION['city'] = $city;
+        $_SESSION['region'] = $region;
         $_SESSION['location'] = $location;
         $_SESSION['crime_type'] = $crime_type;
         $_SESSION['description_box'] = $description_box;
@@ -31,29 +31,17 @@ session_start();
         //submit button varables
         $submit = $_POST['submit'];
 
-        if($date_of_incidence == "" || $time_of_incidence == "" || $city == "" || $location == "" || $crime_type == ""){
+        if($date_of_incidence == "" || $time_of_incidence == "" || $region == "" || $location == "" || $crime_type == ""){
             $msg="All field is required";
         }
 
-        // if (!preg_match("/[a-zA-Z]/", $city) || !preg_match("/[a-zA-Z]/", $region) ) {
-        //     $msg = "Field support only text characters";
-        // }
-
-        // if ($msg <= 0) {
-           
-        //     header('location:./reportForm.php');
-
-        // }else{
-        //      $msg = "Check your details";
-          
-        // }
-
         if ($msg <= 0) {
+          echo 'Report is submited successfully';
        // echo"insert";
         //call session data for report data
         $date_of_incidence=$_POST['date_of_incidence'];
         $time_of_incidence=$_POST['time_of_incidence'];
-        $city=$_POST['city'];
+        $region=$_POST['region'];
         $location=$_POST['location'];
         $crime_type=$_POST['crime_type'];
         $description_box=$_POST['description_box'];
@@ -63,7 +51,7 @@ session_start();
 
 
         //Save report data
-        $insert = "INSERT INTO `reports`(`date_of_incidence`, `time_of_incidence`, `city`, `location`, `crime_type`, `description`, `attachment`, `witness`, `witness_details`) VALUES ('$date_of_incidence','$time_of_incidence','$city','$location','$description_box','$attachment','$witness','$witness_info_box')";
+        $insert = "INSERT INTO `reports`(`date_of_incidence`, `time_of_incidence`, `region`, `location`, `crime_type`, `description`, `attachment`, `witness`, `witness_details`) VALUES ('$date_of_incidence','$time_of_incidence','$region','$location','$crime_type','$description_box','$attachment','$witness','$witness_info_box')";
 
             $results = $conn->exec($insert);
                 if($results){
@@ -181,8 +169,8 @@ session_start();
               
               <div class="grid_item"> 
                 <div class="label_position">
-                  <label for="city">City</label>
-                  <input type="text" name="city">
+                  <label for="region">region</label>
+                  <input type="text" name="region">
                 </div> 
               </div>
               <div class="grid_item"> 

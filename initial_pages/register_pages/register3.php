@@ -10,9 +10,9 @@ if (isset($_POST['submit'])) {
 
     $email = $_SESSION['email'];
 
-    if(empty($photo) || $photo==null){
-         $msg = "Passport photo is required";
-    }
+    // if(empty($photo) || $photo==null){
+    //      $msg = "Passport photo is required";
+    // }
 
 
     if ($msg <= 0) {

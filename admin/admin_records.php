@@ -5,19 +5,13 @@ $dbconn = mysqli_connect('localhost','root','','ocrs_db');
 if (!$dbconn) {
   echo "not connected";
 }else {
-  echo "connected";
+  // echo "connected";
 }
 
 
 // $query data from database
-    $sql= "SELECT * FROM reports";
-
-    $query= mysqli_query($dbconn, $sql);
-    // $result=mysqli_fetch_row($query);
-    // while($row = mysqli_fetch_assoc($query)){
-    //   echo $row['id'];
-    // }
-    
+    $sql= ("SELECT * FROM reports ORDER BY reporting_time desc");
+    $query= mysqli_query($dbconn, $sql);    
 ?>
 
 
@@ -101,7 +95,7 @@ if (!$dbconn) {
           ></a>
         </div>
       </section>
-      <a href="../index.php" class="logout_a"><div class="admin_signout">LOG OUT</div<div class="icon">
+      <a href="../logout/logout_admin.php" class="logout_a"><div class="admin_signout">LOG OUT</div<div class="icon">
               <i class="fa fa-sign-out"></i>
             </div></a>
     </nav>
@@ -114,11 +108,11 @@ if (!$dbconn) {
           <h2>DASHBOARD</h2>
         </div>
         <div class="home_details">
-          <h3><span class="home_color">Home</span> / News</h3>
+          <h3><span class="home_color">Home</span> / Records</h3>
         </div>
           
       </div>
-      <!-- <php echo $row[0] ?> -->
+
       <div class="dashboard_content records_container">
                 <table>
                   <tr>
@@ -128,12 +122,12 @@ if (!$dbconn) {
                     <th>Type of Incidence</th>
                     <th>Date of Incidence</th>
                     <th>Time of Incidence</th>
-                    <th>City</th>
+                    <th>Region</th>
                     <th>Location</th>
                     <th>Tools</th>
                   </tr>
                   <?php
-                    // $rows = mysqli_num_rows($query);
+
                     foreach ($query as $row){
                       // echo $row['id'];
                     
@@ -145,11 +139,14 @@ if (!$dbconn) {
                       <td><?php echo $row['crime_type'] ?></td>
                       <td><?php echo $row['date_of_incidence'] ?></td>
                       <td><?php echo $row['time_of_incidence'] ?></td>
-                      <td><?php echo $row['city'] ?></td>
+                      <td><?php echo $row['region'] ?></td>
                       <td><?php echo $row['location'] ?></td>
                       <td>
-                        <button class="editb"><i class="fa fa-edit"></i></button>
-                        <button class="deleteb"><i class="fa fa-trash"></i></button>
+                        <div class="butContainer">
+                          <button class="editb"><i class="fa fa-edit"></i></button>
+                          <button class="deleteb"><i class="fa fa-trash"></i></button>
+                        </div>
+                        
                       </td>
                     </tr>
                     
@@ -163,6 +160,8 @@ if (!$dbconn) {
     </section>
   </body>
   <script>
+
+    //Action code(Not working)
     const checkbox = document.getElementById("action_check");
     // console.log(checkbox);
     const action = document.getElementById("action_name");

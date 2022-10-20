@@ -73,7 +73,7 @@
           ></a>
         </div>
       </section>
-      <a href="../index.php" class="logout_a"><div class="admin_signout">LOG OUT</div<div class="icon">
+      <a href="../logout/logout_admin.php" class="logout_a"><div class="admin_signout">LOG OUT</div<div class="icon">
               <i class="fa fa-sign-out"></i>
             </div></a>
     </nav>

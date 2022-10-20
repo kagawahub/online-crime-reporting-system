@@ -6,7 +6,12 @@ include("../connection.php");
 	if (isset($_POST['submit'])) {
 		$email = $_POST['email'];
 		$password = $_POST['password'];
-		
+
+    if($email == null || $password == null){
+      echo $msg="Email or password is required";
+    }else{
+      // echo $msg="Give access";
+     // User authentication
 		$stmt = "SELECT * FROM user_data WHERE  email = '$email' AND password = '$password' ";
  		$query = $conn->query($stmt);
 		$column = $query->fetchColumn();
@@ -18,6 +23,8 @@ include("../connection.php");
 			//check if user is verified after registeration
 			$msg = "Incorrect email or password!";
 		}
+
+    }
 }
 
 
@@ -66,7 +73,7 @@ include("../connection.php");
       </nav>
     </header>
     <div class="page_body">
-      <form class="login_form" action=" " method="POST">
+      <form class="login_form" action="" method="POST">
         <div class="img">
           <img src="../img/Cropcrop/police_barge-used.png" alt="" />
         </div>

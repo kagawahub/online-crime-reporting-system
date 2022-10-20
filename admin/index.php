@@ -1,3 +1,34 @@
+<?php
+	$msg = 0;
+session_start();
+include("../connection.php");
+
+	if (isset($_POST['submit'])) {
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+
+    if($username == null || $password == null){
+      $msg="Email or password is required";
+    }else{
+      // echo $msg="Give access";
+     // User authentication
+		$stmt = "SELECT * FROM admin_login WHERE  username = '$username' AND password = '$password'";
+ 		$query = $conn->query($stmt);
+		$column = $query->fetchColumn();
+
+		if ($column != "") {
+			header("location: ./admin_dashboard.php");
+
+		}else{
+			//check if user is verified after registeration
+			$msg = "Incorrect email or password!";
+		}
+
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,18 +43,19 @@
     <div class="form_name">
         <h2>O C R S</h2>
     </div>
-    <form action="./admin_dashboard.php">
+    <form action=" " method="POST">
         <div class="inner_top">
             <div class="icon_container">
                 <i class="fa fa-user"></i>
             </div>
             <h1>Admin</h1>
         </div>
+        <small style="color:red;"> <?php if($msg != null){echo $msg;} ?></small>
 
         <div class="inner_middle">
             <div class="wrap">
                 <label for="email">Email</label>
-                <input type="email" name="email">
+                <input type="text" name="username" required>
             </div>
 
             <div class="wrap">

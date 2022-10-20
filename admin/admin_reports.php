@@ -1,3 +1,20 @@
+<?php
+include("../connection.php");
+
+$dbconn = mysqli_connect('localhost','root','','ocrs_db');
+if (!$dbconn) {
+  echo "not connected";
+}else {
+  // echo "connected";
+}
+
+
+// $query data from database
+    $sql= ("SELECT * FROM `reports` ORDER BY `reports`.`reporting_time` DESC ");
+    $query= mysqli_query($dbconn, $sql);    
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -75,7 +92,7 @@
           ></a>
         </div>
       </section>
-      <a href="../index.php" class="logout_a"><div class="admin_signout">LOG OUT</div<div class="icon">
+      <a href="../logout/logout_admin.php" class="logout_a"><div class="admin_signout">LOG OUT</div<div class="icon">
               <i class="fa fa-sign-out"></i>
             </div></a>
     </nav>
@@ -101,87 +118,31 @@
                     <th>Date of Incidence</th>
                     <th>Time of Incidence</th>
                     <th>Region</th>
-                    <th>Email</th>
                     <th>Tools</th>
                   </tr>
-                  <tr>
-                    <td>a</td>
-                    <td>b</td>
-                    <td>c</td>
-                    <td>d</td>
-                    <td>e</td>
-                    <td>f</td>
-                    <td>g</td>
-                    <td>
-                      <button class="editb"><i class="fa fa-edit"></i></button>
-                      <button class="deleteb"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>                  
-                  <tr>
-                    <td>a</td>
-                    <td>b</td>
-                    <td>c</td>
-                    <td>d</td>
-                    <td>e</td>
-                    <td>f</td>
-                    <td>g</td>
-                    <td>
-                      <button name="submit" class="editb"><i class="fa fa-edit"></i></button>
-                      <button name="submit" class="deleteb"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>                  
-                  <tr>
-                    <td>a</td>
-                    <td>b</td>
-                    <td>c</td>
-                    <td>d</td>
-                    <td>e</td>
-                    <td>f</td>
-                    <td>g</td>
-                    <td>
-                      <button name="submit" class="editb"><i class="fa fa-edit"></i></button>
-                      <button name="submit" class="deleteb"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>                  
-                  <tr>
-                    <td>a</td>
-                    <td>b</td>
-                    <td>c</td>
-                    <td>d</td>
-                    <td>e</td>
-                    <td>f</td>
-                    <td>g</td>
-                    <td>
-                      <button class="editb"><i class="fa fa-edit"></i></button>
-                      <button class="deleteb"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>                  
-                  <tr>
-                    <td>a</td>
-                    <td>b</td>
-                    <td>c</td>
-                    <td>d</td>
-                    <td>e</td>
-                    <td>f</td>
-                    <td>g</td>
-                    <td>
-                      <button class="editb"><i class="fa fa-edit"></i></button>
-                      <button class="deleteb"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>                  
-                  <tr>
-                    <td>a</td>
-                    <td>b</td>
-                    <td>c</td>
-                    <td>d</td>
-                    <td>e</td>
-                    <td>f</td>
-                    <td>g</td>
-                    <td>
-                      <button class="editb"><i class="fa fa-edit"></i></button>
-                      <button class="deleteb"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>                  
+                  <?php
+
+                    foreach ($query as $row){
+                      // echo $row['id'];
+                    
+                    ?>
+                      <tr>
+                      <td><?php echo $row['reporting_time'] ?></td>
+                      <td><?php echo $row['crime_type'] ?></td>
+                      <td><?php echo $row['description'] ?></td>
+                      <td><?php echo $row['date_of_incidence'] ?></td>
+                      <td><?php echo $row['date_of_incidence'] ?></td>
+                      <td><?php echo $row['region'] ?></td>
+                        <div class="butContainer">
+                          <button class="editb"><i class="fa fa-edit"></i></button>
+                          <button class="deleteb"><i class="fa fa-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                    <?php
+                    }
+                  ?>                  
                 </table>
         
       </div>
