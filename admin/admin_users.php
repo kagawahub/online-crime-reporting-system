@@ -19,7 +19,7 @@ if (!$dbconn) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="../scss/ADMIN_scss/_admin_records.scss">
+    <link rel="stylesheet" href="../scss/ADMIN_scss/_admin_tableStyle.scss">
     <link rel="stylesheet" href="../scss/style.scss">
     <link rel="stylesheet" href="../scss/ADMIN_scss/admin_dashboard.css">
     <link rel="stylesheet" href="../awesome_font/font-awesome.min.css" />
