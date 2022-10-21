@@ -1,5 +1,25 @@
+<?php
+include("../connection.php");
+
+$dbconn = mysqli_connect('localhost','root','','ocrs_db');
+if (!$dbconn) {
+  echo "not connected";
+}else {
+  // echo "connected";
+}
+
+
+// $query data from database
+    $sql= ("SELECT * FROM `reports` ORDER BY `reports`.`reporting_time` DESC ");
+    $query= mysqli_query($dbconn, $sql);    
+?>
+
+
+
+
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="../scss/_admin_tableStyle.scss">
     <link rel="stylesheet" href="../scss/style.css" />
     <link rel="stylesheet" href="../awesome_font/font-awesome.min.css" />
     <meta charset="UTF-8" />
@@ -75,7 +95,36 @@
       <h1 class="welcome-msg">ONLINE CRIME REPORTING SYSTEM</h1>
       <div class="page_title">HISTORY</div>
       <div class="main_content">
-      
+        <div class="dashboard_content records_container">
+                <table>
+                  <tr>
+                    <th>Reporting Time</th>
+                    <th>Crime Type</th>
+                    <th>Crime Description</th>
+                    <th>Date of Incidence</th>
+                    <th>Time of Incidence</th>
+                    <th>Region</th>
+                  </tr>
+                  <?php
+
+                    foreach ($query as $row){
+                      // echo $row['id'];
+                    
+                    ?>
+                      <tr>
+                      <td><?php echo $row['reporting_time'] ?></td>
+                      <td><?php echo $row['crime_type'] ?></td>
+                      <td><?php echo $row['description'] ?></td>
+                      <td><?php echo $row['date_of_incidence'] ?></td>
+                      <td><?php echo $row['date_of_incidence'] ?></td>
+                      <td><?php echo $row['region'] ?></td>
+                      
+                    </tr>
+                    
+                    <?php
+                    }
+                  ?>   
+
       </div>
       </div>
   </body>

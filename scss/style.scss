@@ -27,9 +27,11 @@
 @import "./ADMIN_scss/admin_login";
 @import "./ADMIN_scss/admin_dashboard";
 @import "./ADMIN_scss/admin_officers";
-@import "./ADMIN_scss/_admin_tableStyle";
 @import "./ADMIN_scss/_admin_newsPost";
 @import "./ADMIN_scss/admin_users";
 
 // Forgot Password
 @import "./password/forgot_password";
+
+//table
+@import "./ADMIN_scss/_admin_tableStyle";

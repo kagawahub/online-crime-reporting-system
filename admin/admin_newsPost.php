@@ -1,3 +1,63 @@
+<?php
+include("../connection.php");
+
+// error_reporting(0);
+$msg=0;
+
+// $dbconn = mysqli_connect('localhost','root','','ocrs_db');
+// if (!$dbconn) {
+//   echo "not connected";
+// }else {
+//   // echo "connected";
+// }
+
+session_start();
+    if(isset($_POST['submit'])){
+        //declare post variables of form
+        $title=$_POST['title'];
+        $post_body=$_POST['post_body'];
+        $photo=$_POST['photo'];
+
+        //session data for report
+        $_SESSION['title'] = $title;
+        $_SESSION['post_body'] = $post_body;
+        $_SESSION['photo'] = $photo;
+
+        //submit button varables
+        $submit = $_POST['submit'];
+
+        if($title == "" || $post_body == ""){
+            $msg="All field is required";
+        }
+
+        if ($msg <= 0) {
+          echo 'Report is submited successfully';
+       // echo"insert";
+        //call session data for report data
+        $title=$_POST['title'];
+        $post_body=$_POST['post_body'];
+        $photo=$_POST['photo'];
+
+        //Save report data
+        $insert = "INSERT INTO `post`(`title`, `post_body`, `photo`,) VALUES ('$title','$post_body','$photo')";
+
+            $results = $conn->exec($insert);
+                if($results){
+                    $msg = $_SESSION['msg'] = "Your news has been posted successfully";
+                     header('location:./admin_dashboard.php');
+                }else{
+                   echo"Don't redirect";
+                   // header("location:./register3.php");
+                }
+
+    }else{
+        echo"Don't insert";
+    }
+
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -96,10 +156,10 @@
 
           <h3>Make a new post <hr></h3>
           <section class="newPost_container">
-            <form action="">
+            <form action="" method="POST">
               <div class="binder">
               <h3>Title</h3>
-              <input type="text">
+              <input type="text" name="title">
             </div>
 
               <div class="binder">
@@ -111,9 +171,9 @@
               <h4>
                 <span>Attachment:</span> Upload file
               </h4>
-              <input type="file">
+              <input type="file" name="photo">
             </div>
-            <button name="submit">Post</button>
+            <button type="submit" name="submit">Post</button>
             </form>
           </section>
 
