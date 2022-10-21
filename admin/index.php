@@ -1,7 +1,7 @@
 <?php
 	$msg = 0;
 session_start();
-include("../connection.php");
+include("../conn.php");
 
 	if (isset($_POST['submit'])) {
 		$username = $_POST['username'];
@@ -10,20 +10,18 @@ include("../connection.php");
     if($username == null || $password == null){
       $msg="Email or password is required";
     }else{
-      // echo $msg="Give access";
      // User authentication
 		$stmt = "SELECT * FROM admin_login WHERE  username = '$username' AND password = '$password'";
- 		$query = $conn->query($stmt);
-		$column = $query->fetchColumn();
-
-		if ($column != "") {
-			header("location: ./admin_dashboard.php");
-
-		}else{
-			//check if user is verified after registeration
-			$msg = "Incorrect email or password!";
-		}
-
+        $query = mysqli_query($conn, $stmt);
+        $column = mysqli_num_rows($query);
+        
+        if ($column > 0) {
+            $msg="Login successful";
+            $_SESSION['username'] = $username;
+            header("Location: admin_dashboard.php");
+        }else{
+            $msg="Invalid username or password";
+        }
     }
 }
 ?>
