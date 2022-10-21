@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 include("../connection.php");
 
@@ -58,6 +59,31 @@ session_start();
 ?>
 
 
+=======
+<?php 
+include ("../conn.php");
+
+if (isset($_POST['submit'])) {
+    $title = $_POST['title'];
+    $body = $_POST['post_body'];
+    $file_name = $_FILES['uploadfile']['name'];
+    $temp_name = $_FILES['uploadfile']['tmp_name'];
+    $folder = "uploads/".$file_name;
+
+    $date = date("Y-m-d H:i:s");
+
+    $sql = "INSERT INTO post (title, post_body, photo, DateTime) VALUES ('$title', '$body', '$file_name', '$date')";
+    $result = mysqli_query($conn, $sql);
+    if($result){
+        move_uploaded_file($temp_name, $folder);
+        echo "<script>alert('Post created successfully!')</script>";
+    }else{
+        echo "<script>alert('Post creation failed!')</script>";
+    }
+}
+?>
+
+>>>>>>> 12231e5e63ea38f590bd3102c3669e35e8649947
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -156,6 +182,7 @@ session_start();
 
           <h3>Make a new post <hr></h3>
           <section class="newPost_container">
+<<<<<<< HEAD
             <form action="" method="POST">
               <div class="binder">
               <h3>Title</h3>
@@ -174,9 +201,28 @@ session_start();
               <input type="file" name="photo">
             </div>
             <button type="submit" name="submit">Post</button>
+=======
+            <form action="admin_newsPost.php" enctype="multipart/form-data" method="post">
+                  <div class="binder">
+                  <h3>Title</h3>
+                  <input type="text" name="title">
+                </div>
+
+                  <div class="binder">
+                    <h3>Body</h3>
+                    <textarea name="post_body" id="postBody" cols="30" rows="10">
+                    </textarea>
+                </div>
+                <div class="attachment">
+                  <h4>
+                    <span>Attachment:</span> Upload file
+                  </h4>
+                  <input type="file" name="uploadfile">
+                </div>
+                <button name="submit">Post</button>
+>>>>>>> 12231e5e63ea38f590bd3102c3669e35e8649947
             </form>
           </section>
-
           <h3 class="postsLabel">POST HISTORY</h3>
           <section class="posts_container">
             

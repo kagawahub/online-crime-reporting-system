@@ -1,3 +1,15 @@
+<?php 
+require_once '../conn.php';
+session_start();
+
+$sql = "SELECT * FROM admin_login where username = '".$_SESSION['username']."'";
+$query = mysqli_query($conn, $sql);
+foreach ($query as $row) {
+  global $fullname;
+  $fullname = $row['fullname'];
+}
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +18,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Administrator Dashboard</title>
   </head>
   <body class="admin_body">
@@ -18,21 +31,34 @@
           <div class="rounded_online"></div>
           <img class="admin_img1" src="../img/boss-about2.png" alt="">
         </div>
-        <div class="admin_profiletext_container">
+        <!-- <div class="admin_profiletext_container">
           <h3>Bossman Owusu</h3>
           <p style="color: white; font-size:16px; text-align: left;">Admin</p>
-        </div>
-        <a href="#"><i class="fa fa-caret-down" id="dropdown_js"></i></a>
+        </div> -->
+        <!-- <a href="#"><i class="fa fa-caret-down" id="dropdown_js"></i></a> -->
+        <div class="dropdown">
+          <button style="background: none; border:none;" class="admin_profiletext_container dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <h3 class="m-0 text-danger">
+              <?php echo $fullname ?>
+            </h3>
+            <p class="m-0" style="color: white; font-size:16px; text-align: left;">Admin</p>
+          </button>
+          <ul class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Notifications</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="admin_createAdmin.php">Add an admin</a></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
       </div>
-      <div class="dropdown_menu" >
+      </div>
+      <!-- <div class="dropdown_menu" >
         <ul id="dropdown_list">
           <li><a href="#">Notifications</a></li>
           <li><a href="#">Profile</a></li>
           <li><a href="#">Add an admin</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
-      </div>
-      
+      </div> -->
       <section class="navi-container">
         <div class="navi_item">
           <a href="./admin_dashboard.php" class="navi_a"
@@ -168,6 +194,7 @@
         </div>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
   <script>
     const dropdown = document.getElementById("dropdown_js");
