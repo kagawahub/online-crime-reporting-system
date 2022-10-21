@@ -1,3 +1,26 @@
+<?php 
+include ("../conn.php");
+
+if (isset($_POST['submit'])) {
+    $title = $_POST['title'];
+    $body = $_POST['post_body'];
+    $file_name = $_FILES['uploadfile']['name'];
+    $temp_name = $_FILES['uploadfile']['tmp_name'];
+    $folder = "uploads/".$file_name;
+
+    $date = date("Y-m-d H:i:s");
+
+    $sql = "INSERT INTO post (title, post_body, photo, DateTime) VALUES ('$title', '$body', '$file_name', '$date')";
+    $result = mysqli_query($conn, $sql);
+    if($result){
+        move_uploaded_file($temp_name, $folder);
+        echo "<script>alert('Post created successfully!')</script>";
+    }else{
+        echo "<script>alert('Post creation failed!')</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -96,27 +119,26 @@
 
           <h3>Make a new post <hr></h3>
           <section class="newPost_container">
-            <form action="">
-              <div class="binder">
-              <h3>Title</h3>
-              <input type="text">
-            </div>
+            <form action="admin_newsPost.php" enctype="multipart/form-data" method="post">
+                  <div class="binder">
+                  <h3>Title</h3>
+                  <input type="text" name="title">
+                </div>
 
-              <div class="binder">
-                <h3>Body</h3>
-                <textarea name="post_body" id="postBody" cols="30" rows="10">
-                </textarea>
-            </div>
-            <div class="attachment">
-              <h4>
-                <span>Attachment:</span> Upload file
-              </h4>
-              <input type="file">
-            </div>
-            <button name="submit">Post</button>
+                  <div class="binder">
+                    <h3>Body</h3>
+                    <textarea name="post_body" id="postBody" cols="30" rows="10">
+                    </textarea>
+                </div>
+                <div class="attachment">
+                  <h4>
+                    <span>Attachment:</span> Upload file
+                  </h4>
+                  <input type="file" name="uploadfile">
+                </div>
+                <button name="submit">Post</button>
             </form>
           </section>
-
           <h3 class="postsLabel">POST HISTORY</h3>
           <section class="posts_container">
             
