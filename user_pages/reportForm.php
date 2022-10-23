@@ -49,6 +49,7 @@ session_start();
         $witness=$_POST['witness'];
         $witness_info_box=$_POST['witness_info_box'];
 
+        echo "<script>alert('Post created successfully!')</script>";
 
         //Save report data
         $insert = "INSERT INTO `reports`(`date_of_incidence`, `time_of_incidence`, `region`, `location`, `crime_type`, `description`, `attachment`, `witness`, `witness_details`) VALUES ('$date_of_incidence','$time_of_incidence','$region','$location','$crime_type','$description_box','$attachment','$witness','$witness_info_box')";

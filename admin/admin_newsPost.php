@@ -1,65 +1,3 @@
-<<<<<<< HEAD
-<?php
-include("../connection.php");
-
-// error_reporting(0);
-$msg=0;
-
-// $dbconn = mysqli_connect('localhost','root','','ocrs_db');
-// if (!$dbconn) {
-//   echo "not connected";
-// }else {
-//   // echo "connected";
-// }
-
-session_start();
-    if(isset($_POST['submit'])){
-        //declare post variables of form
-        $title=$_POST['title'];
-        $post_body=$_POST['post_body'];
-        $photo=$_POST['photo'];
-
-        //session data for report
-        $_SESSION['title'] = $title;
-        $_SESSION['post_body'] = $post_body;
-        $_SESSION['photo'] = $photo;
-
-        //submit button varables
-        $submit = $_POST['submit'];
-
-        if($title == "" || $post_body == ""){
-            $msg="All field is required";
-        }
-
-        if ($msg <= 0) {
-          echo 'Report is submited successfully';
-       // echo"insert";
-        //call session data for report data
-        $title=$_POST['title'];
-        $post_body=$_POST['post_body'];
-        $photo=$_POST['photo'];
-
-        //Save report data
-        $insert = "INSERT INTO `post`(`title`, `post_body`, `photo`,) VALUES ('$title','$post_body','$photo')";
-
-            $results = $conn->exec($insert);
-                if($results){
-                    $msg = $_SESSION['msg'] = "Your news has been posted successfully";
-                     header('location:./admin_dashboard.php');
-                }else{
-                   echo"Don't redirect";
-                   // header("location:./register3.php");
-                }
-
-    }else{
-        echo"Don't insert";
-    }
-
-    }
-?>
-
-
-=======
 <?php 
 include ("../conn.php");
 
@@ -83,7 +21,8 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
->>>>>>> 12231e5e63ea38f590bd3102c3669e35e8649947
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -102,7 +41,7 @@ if (isset($_POST['submit'])) {
       <div class="admin_profile_container">
         <div class="admin_pic">
           <div class="rounded_online"></div>
-          <img class="admin_img1" src="../img/boss-about2.png" alt="">
+          <img class="admin_img1" src="../img/items/profile_icon2.png" alt="">
         </div>
         <div class="admin_profiletext_container">
           <h3>Bossman Owusu</h3>
@@ -182,26 +121,7 @@ if (isset($_POST['submit'])) {
 
           <h3>Make a new post <hr></h3>
           <section class="newPost_container">
-<<<<<<< HEAD
-            <form action="" method="POST">
-              <div class="binder">
-              <h3>Title</h3>
-              <input type="text" name="title">
-            </div>
 
-              <div class="binder">
-                <h3>Body</h3>
-                <textarea name="post_body" id="postBody" cols="30" rows="10">
-                </textarea>
-            </div>
-            <div class="attachment">
-              <h4>
-                <span>Attachment:</span> Upload file
-              </h4>
-              <input type="file" name="photo">
-            </div>
-            <button type="submit" name="submit">Post</button>
-=======
             <form action="admin_newsPost.php" enctype="multipart/form-data" method="post">
                   <div class="binder">
                   <h3>Title</h3>
@@ -220,7 +140,6 @@ if (isset($_POST['submit'])) {
                   <input type="file" name="uploadfile">
                 </div>
                 <button name="submit">Post</button>
->>>>>>> 12231e5e63ea38f590bd3102c3669e35e8649947
             </form>
           </section>
           <h3 class="postsLabel">POST HISTORY</h3>
