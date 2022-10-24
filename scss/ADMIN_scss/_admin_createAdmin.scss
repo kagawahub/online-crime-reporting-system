@@ -7,7 +7,12 @@
     height: 25rem;
     translate: 127% 20%;
     border-radius: 15px;
-
+    .form_name {
+      h2 {
+        color: yellow;
+        background: red;
+      }
+    }
     h2 {
       color: red;
       text-align: center;
@@ -15,12 +20,13 @@
     }
 
     .create_container {
-      margin-top: 4rem;
+      margin-top: 2rem;
       // background: red;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 7px;
 
       label {
         font-size: 20px;
@@ -30,13 +36,25 @@
         width: 15rem;
         height: 1.8rem;
         border-radius: 10px;
+        padding: 5px;
+
+        &:placeholder {
+          color: red;
+          padding: 5px;
+        }
       }
     }
 
     .createButton {
-      background: yellow;
-      color: red;
+      float: right;
+      background: white;
+      color: rgb(0, 46, 92);
       font-size: 19px;
+      margin-right: 4.1rem;
+      margin-top: 10px;
+      padding: 4px;
+      border-radius: 7px;
+      font-weight: 600;
     }
   }
 }

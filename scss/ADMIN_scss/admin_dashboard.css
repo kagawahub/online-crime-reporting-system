@@ -26,14 +26,18 @@
   display: flex;
 }
 .sidebar .admin_profile_container .admin_pic {
-  width: 20%;
+  width: 2.7rem;
+  height: 2.7rem;
   margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  background: white;
+  border-radius: 50%;
 }
 .sidebar .admin_profile_container .admin_pic .admin_img1 {
   display: inline-block;
-  height: 2.5rem;
-  width: 2.5rem;
-  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  margin-top: 3px;
 }
 .sidebar .admin_profile_container .admin_pic .rounded_online {
   position: absolute;

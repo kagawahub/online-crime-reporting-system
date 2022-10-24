@@ -21,6 +21,8 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,7 +41,7 @@ if (isset($_POST['submit'])) {
       <div class="admin_profile_container">
         <div class="admin_pic">
           <div class="rounded_online"></div>
-          <img class="admin_img1" src="../img/boss-about2.png" alt="">
+          <img class="admin_img1" src="../img/items/profile_icon2.png" alt="">
         </div>
         <div class="admin_profiletext_container">
           <h3>Bossman Owusu</h3>
@@ -119,6 +121,7 @@ if (isset($_POST['submit'])) {
 
           <h3>Make a new post <hr></h3>
           <section class="newPost_container">
+
             <form action="admin_newsPost.php" enctype="multipart/form-data" method="post">
                   <div class="binder">
                   <h3>Title</h3>

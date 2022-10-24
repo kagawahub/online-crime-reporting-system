@@ -29,7 +29,7 @@ foreach ($query as $row) {
       <div class="admin_profile_container">
         <div class="admin_pic">
           <div class="rounded_online"></div>
-          <img class="admin_img1" src="../img/boss-about2.png" alt="">
+          <img class="admin_img1" src="../img/items/profile_icon2.png" alt="">
         </div>
         <!-- <div class="admin_profiletext_container">
           <h3>Bossman Owusu</h3>
@@ -40,6 +40,7 @@ foreach ($query as $row) {
           <button style="background: none; border:none;" class="admin_profiletext_container dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             <h3 class="m-0 text-danger">
               <?php echo $fullname ?>
+              <a href="#"><i class="fa fa-caret-down" id="dropdown_js"></i></a>
             </h3>
             <p class="m-0" style="color: white; font-size:16px; text-align: left;">Admin</p>
           </button>
@@ -47,7 +48,7 @@ foreach ($query as $row) {
             <li><a class="dropdown-item" href="#">Notifications</a></li>
             <li><a class="dropdown-item" href="#">Profile</a></li>
             <li><a class="dropdown-item" href="admin_createAdmin.php">Add an admin</a></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <li><a class="dropdown-item" href="../logout/logout_admin.php">Logout</a></li>
           </ul>
       </div>
       </div>
@@ -64,7 +65,8 @@ foreach ($query as $row) {
           <a href="./admin_dashboard.php" class="navi_a"
             ><h2 style="margin-top: 0.28rem">Dashboard</h2>
             <div class="admin_icon">
-              <i class="fa fa-dashboard"></i></div
+              <i class="fa fa-dashboard"></i>
+              </div
           ></a>
         </div>
 

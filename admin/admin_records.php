@@ -21,7 +21,7 @@ if (!$dbconn) {
 <html lang="en">
   <head>
     <link rel="stylesheet" href="../scss/style.scss">
-    <link rel="stylesheet" href="../scss/ADMIN_scss/_admin_tableStyle.scss">
+    <link rel="stylesheet" href="../scss/_admin_tableStyle.scss">
     <link rel="stylesheet" href="../scss/ADMIN_scss/admin_dashboard.css">
     <link rel="stylesheet" href="../awesome_font/font-awesome.min.css" />
     <meta charset="UTF-8" />
@@ -37,7 +37,7 @@ if (!$dbconn) {
       <div class="admin_profile_container">
         <div class="admin_pic">
           <div class="rounded_online"></div>
-          <img class="admin_img1" src="../img/boss-about2.png" alt="">
+          <img class="admin_img1" src="../img/items/profile_icon2.png" alt="">
         </div>
         <div class="admin_profiletext_container">
           <h3>Bossman Owusu</h3>
