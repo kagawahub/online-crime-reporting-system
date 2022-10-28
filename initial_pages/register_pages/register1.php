@@ -161,22 +161,21 @@ error_reporting(0);
                     <div class="insider"> <label for="region">Region</label>
                     <select name="region" class="Rcombo_box">
                       <option value="select">Select</option>
-                      <option value="accra">Greater Accra Region</option>
-                      <option value="ahanti">Ashanti Region</option>
-                      <option value="central">Central Region</option>
-                      <option value="western">Western Region</option>
-                      <option value="northern">Northern Region</option>
-                      <option value="west">Upper West Region</option>
-                      <option value="east">Upper East Region</option>
-                      <option value="brong">Brong Ahafo Region</option>
-                      <option value="east">Upper East Region</option>
-                      <option value="oti">Oti Region</option>
-                      <option value="ahafo">Ahafo Region</option>
-                      <option value="volta">Volta Region</option>
-                      <option value="bono">Bono East Region</option>
-                      <option value="north">North East Region</option>
-                      <option value="western_North">North East Region</option>
-                      <option value="ahafo">Ahafo Region</option>
+                      <option value="Greater Accra Region">Greater Accra Region</option>
+                      <option value="Ashanti Region">Ashanti Region</option>
+                      <option value="Central Region">Central Region</option>
+                      <option value="Western Region">Western Region</option>
+                      <option value="Northern Region">Northern Region</option>
+                      <option value="Upper West Region">Upper West Region</option>
+                      <option value="Upper East Region">Upper East Region</option>
+                      <option value="Brong Ahafo Region">Brong Ahafo Region</option>
+                      <option value="Oti Region">Oti Region</option>
+                      <option value="Ahafo Region">Ahafo Region</option>
+                      <option value="Volta Region">Volta Region</option>
+                      <option value="Bono East Region">Bono East Region</option>
+                      <option value="North East Region">North East Region</option>
+                      <option value="Western North">Western North</option>
+                      <option value="Ahafo Region">Ahafo Region</option>
                     </select>
 
                         <!-- <input type="text" name="region" value="<?php if(isset($submit)){echo $region;}?>" /> -->

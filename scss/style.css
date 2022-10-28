@@ -780,6 +780,14 @@ img {
   margin-bottom: 2rem;
 }
 
+.news_container .news_item {
+  color: blue;
+}
+.news_container .news_item .news_title {
+  text-align: center;
+  font-weight: 600;
+  color: red;
+}
 .report_form {
   margin-top: 1.5rem;
   margin-bottom: 2rem;

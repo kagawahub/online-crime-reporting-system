@@ -48,6 +48,7 @@ foreach ($query as $row) {
             <li><a class="dropdown-item" href="#">Notifications</a></li>
             <li><a class="dropdown-item" href="#">Profile</a></li>
             <li><a class="dropdown-item" href="admin_createAdmin.php">Add an admin</a></li>
+            <li><a class="dropdown-item" href="../initial_pages/register_pages/register1.php">Add a user</a></li>
             <li><a class="dropdown-item" href="../logout/logout_admin.php">Logout</a></li>
           </ul>
       </div>
