@@ -41,6 +41,47 @@
     </header>
     <div class="emergency_body">
         <div class="emergency_heading">
+            EMERGENCY REPORTING
+        </div>
+        <form class="emer_report" action="" method="POST">
+            <h2>REPORT AN EMERGENCY</h2>
+            <div class="grid_container">
+            <section class="grid_item">
+                <div class="r_content">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text">
+                </div>
+            </section>
+                <section class="grid_item">
+                <div class="r_content">
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel">
+                </div>
+            </section>
+                <section class="grid_item">
+                <div class="r_content">
+                    <label for="crime_type">Crime Type</label>
+                    <input id="crime_type" name="crime_type" type="text">
+                </div>
+            </section>
+            <section class="grid_item">
+                <div class="r_content">
+                    <label for="location">Location</label>
+                    <input id="location" name="location" type="text">
+                </div>
+            </section>
+            </div>
+            <section class="des_container">
+                <div class="r_content">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" cols="30" rows="12"></textarea>
+                </div>
+            </section>
+            <button class="emer_button" name="submit" value="submit">SUBMIT</button>
+        </form>
+
+
+        <div class="emergency_next">
             EMERGENCY NUMBERS
         </div>
         <section class="emergency_text">
