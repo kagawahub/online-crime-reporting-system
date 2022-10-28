@@ -1,3 +1,65 @@
+<?php
+include("../connection.php");
+
+// error_reporting(0);
+$msg=0;
+
+session_start();
+    if(isset($_POST['submit'])){
+        //declare post variables of form
+        $name=$_POST['name'];
+        $phone=$_POST['phone'];
+        $crime_type = $_POST['crime_type'];
+        $location=$_POST['location'];
+        $description=$_POST['description'];
+
+        //session data for report
+        $_SESSION['name'] = $name;
+        $_SESSION['phone'] = $phone;
+        $_SESSION['crime_type'] = $crime_type;
+        $_SESSION['location'] = $location;
+        $_SESSION['description'] = $description;
+
+        //submit button varables
+        $submit = $_POST['submit'];
+
+        if($name == "" || $phone == "" || $crime_type == "" || $location == ""){
+            $msg="All field is required";
+        }
+
+        if ($msg <= 0) {
+          echo 'Report is submited successfully';
+       // echo"insert";
+        //call session data for report data
+        $name=$_POST['name'];
+        $phone=$_POST['phone'];
+        $crime_type = $_POST['crime_type'];
+        $location=$_POST['location'];
+        $description=$_POST['description'];
+
+        echo "<script>alert('Report submitted successfully!')</script>";
+
+        //Save report data
+        $insert = "INSERT INTO `emergency_report`(`name`, `phone`, `crime_type`, `location`, `description`) VALUES ('$name','$phone','$crime_type','$location','$description')";
+
+            $results = $conn->exec($insert);
+                if($results){
+                    $msg = $_SESSION['msg'] = "Your report has been submited successfully";
+                     header('location:./emergency.php');
+                     $msg = $_SESSION['msg'] = "Your report has been submited successfully";
+                }else{
+                   // echo"Don't redirect";
+                   // header("location:./register3.php");
+                }
+
+    }else{
+        // echo"Dont insert";
+    }
+
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +96,7 @@
                     <li>About</li>
                 </a>
                 <a href="#emergency" class="active_page">
-                    <li>Emergency numbers</li>
+                    <li>Emergency</li>
                 </a>
             </ul>
         </nav>
@@ -159,7 +221,7 @@
                     <li>About</li>
                 </a>
                 <a href="#emergency">
-                    <li>Emergency numbers</li>
+                    <li>Emergency</li>
                 </a>
             </ul>
         </section>

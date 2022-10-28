@@ -49,14 +49,14 @@ session_start();
         $witness=$_POST['witness'];
         $witness_info_box=$_POST['witness_info_box'];
 
-        echo "<script>alert('Post created successfully!')</script>";
+        echo "<script>alert('Report submitted successfully!')</script>";
 
         //Save report data
         $insert = "INSERT INTO `reports`(`date_of_incidence`, `time_of_incidence`, `region`, `location`, `crime_type`, `description`, `attachment`, `witness`, `witness_details`) VALUES ('$date_of_incidence','$time_of_incidence','$region','$location','$crime_type','$description_box','$attachment','$witness','$witness_info_box')";
 
             $results = $conn->exec($insert);
                 if($results){
-                    $msg = $_SESSION['msg'] = "Your report has been submited successfully";
+                    $msg = $_SESSION['msg'] = "Report submitted successfully";
                      header('location:./reportForm.php');
                 }else{
                    // echo"Don't redirect";
@@ -209,23 +209,8 @@ session_start();
               <label for="Attachment"><span> Attachment:</span> Add a file</label>
               <input type="file" name="attachment">
             </div>
-
               </div>
-              
             </section>
-            //$query data from database
-               <!-- $sql= "select * from reports"
-               $query = ($conn,sql)
-               $result=mysql_fetch_all()
-                table
-                td
-                th
-                tr
-                foreach ($result as $row){
-                  <tr><php echo $row[0] ?>
-                }
-                tr
-                table -->
               <div class="title wit">Witnesses</div>
               <div class="witnesses">
                 <p>Were there any witnesses to the incident?</p>

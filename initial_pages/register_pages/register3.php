@@ -90,7 +90,7 @@ if (isset($_POST['submit'])) {
                     <li>About</li>
                 </a>
                 <a href="../emergency.php">
-                    <li>Emergency numbers</li>
+                    <li>Emergency</li>
                 </a>
             </ul>
         </nav>
@@ -156,7 +156,7 @@ if (isset($_POST['submit'])) {
                     <li>About</li>
                 </a>
                 <a href="../emergency.php">
-                    <li>Emergency numbers</li>
+                    <li>Emergency</li>
                 </a>
             </ul>
         </section>
