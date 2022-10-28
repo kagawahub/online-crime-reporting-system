@@ -1,17 +1,8 @@
 <?php
-include("../connection.php");
-
-$dbconn = mysqli_connect('localhost','root','','ocrs_db');
-if (!$dbconn) {
-  echo "not connected";
-}else {
-  // echo "connected";
-}
-
-
+include("../conn.php");
 // $query data from database
     $sql= ("SELECT * FROM `reports` ORDER BY `reports`.`reporting_time` DESC ");
-    $query= mysqli_query($dbconn, $sql);    
+    $query= mysqli_query($conn, $sql);   
 ?>
 
 
@@ -123,8 +114,7 @@ if (!$dbconn) {
                   <?php
 
                     foreach ($query as $row){
-                      // echo $row['id'];
-                    
+                      $id = $row['id'];
                     ?>
                       <tr>
                       <td><?php echo $row['reporting_time'] ?></td>
@@ -135,14 +125,49 @@ if (!$dbconn) {
                       <td><?php echo $row['region'] ?></td>
                       <td>
                         <div class="butContainer">
-                          <button class="editb"><i class="fa fa-edit"></i></button>
-                          <button class="deleteb"><i class="fa fa-trash"></i></button>
+                          <form action="admin_reports.php?=<?php echo $row['id'] ?>" method="post">
+                            <input type="submit" name="edit" class="editb"><i class="fa fa-edit"></i>
+                          </form>
+                          <form action="admin_reports.php?=<?php echo $id ?>" method="post">
+                            <input type="submit" name="delete" class="deleteb"><i class="fa fa-trash"></i>
+                          </form>
+
+                          <!-- <a href="admin_reports.php?=<?php #echo $row['id'] ?>" class="deleteb"><i class="fa fa-trash"></i></a> -->
                         </div>
                       </td>
                     </tr>
                     
                     <?php
                     }
+                    // if(isset($_POST['edit'])){
+                      // $id = $_POST['edit'];
+                      // $id = $row['id'];
+                      // echo "<script>alert('$id')</script>";
+
+                      // $query = $conn->query("SELECT * FROM reports WHERE id = '$id'") or die($conn->error);
+                      // $row = $query->fetch_array();
+                      // foreach($query as $row){
+                      //   $id = $row['id'];
+                      //   $reporting_time = $row['reporting_time'];
+                      //   $crime_type = $row['crime_type'];
+                      //   $description = $row['description'];
+                      //   $date_of_incidence = $row['date_of_incidence'];
+                      //   $time_of_incidence = $row['time_of_incidence'];
+                      //   $region = $row['region'];
+
+                      //   echo "<script>alert('$id')</script>";
+                      // }
+                    // }
+                    // if(isset($_POST['delete'])){
+                    //   // $id = $_GET['id'];
+                    //   $sql = "DELETE FROM reports WHERE id = $id";
+                    //   $query = mysqli_query($conn, $sql);
+                    //   if($query){
+                    //     echo "Deleted";
+                    //   }else{
+                    //     echo "Not Deleted";
+                    //   }
+                    // }
                   ?>                  
                 </table>
         
