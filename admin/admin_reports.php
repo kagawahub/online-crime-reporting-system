@@ -114,7 +114,7 @@ include("../conn.php");
                   <?php
 
                     foreach ($query as $row){
-                      $id = $row['id'];
+                      // $id = $row['id'];
                     ?>
                       <tr>
                       <td><?php echo $row['reporting_time'] ?></td>
@@ -138,6 +138,9 @@ include("../conn.php");
                     </tr>
                     
                     <?php
+                    }
+                    if(isset($_POST['delete'])){
+                        echo $row['id'];
                     }
                     // if(isset($_POST['edit'])){
                       // $id = $_POST['edit'];
